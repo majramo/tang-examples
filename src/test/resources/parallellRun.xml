@@ -1,0 +1,47 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="10" name="parallell.testng.xml">
+    <test name="smoke_test_firefox_00001_test">
+        <parameter name="browser" value="Firefox"/>
+        <groups>
+            <run>
+                <exclude name=".*(KNOWN_DEFECT|MOCK).*"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="verification.google.SearchAtGoogleTest"/>
+        </classes>
+    </test> <!-- smoke_test_firefox_00001_test -->
+    <test name="smoke_test_chrome_00002_test">
+        <parameter name="browser" value="Chrome"/>
+        <groups>
+            <run>
+                <exclude name=".*(KNOWN_DEFECT|MOCK).*"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="verification.google.SearchAtGoogleTest"/>
+        </classes>
+    </test> <!-- smoke_test_chrome_00002_test -->
+    <test name="smoke_test_internetexplorer_00003_test">
+        <parameter name="browser" value="InternetExplorer"/>
+        <groups>
+            <run>
+                <exclude name=".*(KNOWN_DEFECT|MOCK).*"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="verification.google.SearchAtGoogleTest"/>
+        </classes>
+    </test> <!-- smoke_test_internetexplorer_00003_test -->
+    <test name="smoke_test_ff_remote_00004_test">
+        <parameter name="browser" value="FF_REMOTE"/>
+        <groups>
+            <run>
+                <exclude name=".*(KNOWN_DEFECT|MOCK).*"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="verification.google.SearchAtGoogleTest"/>
+        </classes>
+    </test> <!-- smoke_test_ff_remote_00004_test -->
+</suite> <!-- parallell.testng.xml -->

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="5">
+	<test name="Test Google">
+		<packages>
+			<package name="verification.google.*" />
+		</packages>
+	</test> <!-- Test -->
+	<test name="Test Google IE">
+		<packages>
+			<package name="verification.google.*" />
+		</packages>
+	</test> <!-- Test -->
+	<test name="Test Linkedin">
+		<packages>
+			<package name="verification.linkedin.*" />
+		</packages>
+	</test> <!-- Test -->
+	<test name="Test Linkedins">
+		<packages>
+			<package name="verification.linkedinWithDataProvider.*" />
+		</packages>
+	</test> <!-- Test -->
+	<test name="Test Linkedins Copy">
+		<packages>
+			<package name="verification.linkedinWithDataProvider.*" />
+		</packages>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

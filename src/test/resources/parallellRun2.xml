@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="6" name="TestEnv_One.00001.suite" parallel="tests">
+    <test name="TestEnv_One.LOCAL_FIREFOX.00001.test">
+        <parameter name="environment" value="TestEnv_One"/>
+        <parameter name="browser" value="LOCAL_FIREFOX"/>
+        <groups>
+            <run>
+                <exclude name=".*(KNOWN_DEFECT|MOCK).*"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="verification.ikea.SearchPhraseAtIkeaInSeveralCountriesWithDataProvidersTest"/>
+        </classes>
+    </test>
+    <!-- TestEnv_One.LOCAL_FIREFOX.00001.test -->
+    <test name="TestEnv_One.LOCAL_SAFARI.00002.test">
+        <parameter name="environment" value="TestEnv_One"/>
+        <parameter name="browser" value="LOCAL_SAFARI"/>
+        <groups>
+            <run>
+                <exclude name=".*(KNOWN_DEFECT|MOCK).*"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="verification.ikea.SearchPhraseAtIkeaInSeveralCountriesWithDataProvidersTest"/>
+        </classes>
+    </test>
+    <!-- TestEnv_One.LOCAL_SAFARI.00002.test -->
+    <test name="TestEnv_One.LOCAL_CHROME.00003.test">
+        <parameter name="environment" value="TestEnv_One"/>
+        <parameter name="browser" value="LOCAL_CHROME"/>
+        <groups>
+            <run>
+                <exclude name=".*(KNOWN_DEFECT|MOCK).*"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="verification.ikea.SearchPhraseAtIkeaInSeveralCountriesWithDataProvidersTest"/>
+        </classes>
+    </test>
+    <!-- TestEnv_One.LOCAL_CHROME.00003.test -->
+</suite> <!-- TestEnv_One.00001.suite -->

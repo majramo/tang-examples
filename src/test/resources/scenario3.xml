@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Scenario 3 parallell test run" parallel="tests" thread-count="3">
+
+    <test name="TestEnv_One.Firefox.00001.test">
+        <parameter name="environment" value="TestEnv_One"/>
+        <parameter name="browser" value="LOCAL_FIREFOX"/>
+        <groups>
+            <run>
+                <exclude name=".*(KNOWN_DEFECT|MOCK).*"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="verification.ikea.SearchPhraseInSeveralCountriesStaticDataproviderNoSlowDownAtIkeaTest"/>
+        </classes>
+    </test>
+
+    <test name="TestEnv_One.Chrome.00002.test">
+        <parameter name="environment" value="TestEnv_One"/>
+        <parameter name="browser" value="LOCAL_CHROME"/>
+        <groups>
+            <run>
+                <exclude name=".*(KNOWN_DEFECT|MOCK).*"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="verification.ikea.SearchPhraseInSeveralCountriesStaticDataproviderNoSlowDownAtIkeaTest"/>
+        </classes>
+    </test>
+
+    <test name="TestEnv_One.Firefox.00003.test">
+        <parameter name="environment" value="TestEnv_One"/>
+        <parameter name="browser" value="LOCAL_FIREFOX"/>
+        <groups>
+            <run>
+                <exclude name=".*(KNOWN_DEFECT|MOCK).*"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="verification.ikea.SearchPhraseInSeveralCountriesStaticDataproviderNoSlowDownAtIkeaTest"/>
+        </classes>
+    </test>
+
+    <test name="TestEnv_One.Chrome.00004.test">
+        <parameter name="environment" value="TestEnv_One"/>
+        <parameter name="browser" value="LOCAL_CHROMEa"/>
+        <groups>
+            <run>
+                <exclude name=".*(KNOWN_DEFECT|MOCK).*"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="verification.ikea.SearchPhraseInSeveralCountriesStaticDataproviderNoSlowDownAtIkeaTest"/>
+        </classes>
+    </test>
+
+</suite>
+

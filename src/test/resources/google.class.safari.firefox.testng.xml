@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="1">
+
+    <test name="Test Google Firefox SearchAtGoogleWithDataProviderTest" enabled="true">
+        <parameter name="browser" value="Firefox"></parameter>
+        <classes>
+            <class name="verification.google.SearchAtGoogleWithDataProviderTest"/>
+        </classes>
+    </test> <!-- Test -->
+
+    <test name="Test Google Safari SearchAtGoogleWithDataProviderTest" enabled="true">
+        <parameter name="browser" value="Safari"></parameter>
+        <classes>
+            <class name="verification.google.SearchAtGoogleWithDataProviderTest"/>
+        </classes>
+    </test> <!-- Test -->
+
+    <test name="Test Google Firefox SearchAtGoogleTest" enabled="true">
+        <parameter name="browser" value="Firefox"></parameter>
+        <classes>
+            <class name="verification.google.SearchAtGoogleTest"/>
+        </classes>
+    </test> <!-- Test -->
+
+    <test name="Test Google Safari SearchAtGoogleTest" enabled="true">
+        <parameter name="browser" value="Safari"></parameter>
+        <classes>
+            <class name="verification.google.SearchAtGoogleTest"/>
+        </classes>
+    </test> <!-- Test -->
+
+
+</suite> <!-- Suite -->
