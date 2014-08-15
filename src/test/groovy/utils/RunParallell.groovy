@@ -5,6 +5,7 @@ import org.testng.xml.XmlClass
 import org.testng.xml.XmlPackage
 import org.testng.xml.XmlSuite
 import org.testng.xml.XmlTest
+import reports.TangHtmlReporter
 import verification.dummy.FailedTest
 
 public class RunParallell {
@@ -114,7 +115,7 @@ public class RunParallell {
         try {
             //classes.add(org.uncommons.reportng.HTMLReporter)
             classes.add(org.testng.reporters.EmailableReporter)
-            classes.add(reports.VemHtmlReporter)
+            classes.add(TangHtmlReporter)
 //            classes.add(atu.testng.reports.listeners.ATUReportsListener)
 //            classes.add(atu.testng.reports.listeners.ConfigurationListener)
 //            classes.add(atu.testng.reports.listeners.MethodListener)
