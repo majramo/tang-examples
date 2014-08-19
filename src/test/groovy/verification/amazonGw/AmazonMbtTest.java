@@ -58,7 +58,7 @@ public class AmazonMbtTest extends AnyMbtTest {
      * This method implements the Edge 'e_StartBrowser'
      */
     public void e_StartBrowser() {
-        amazonStartPage = new AmazonStartPage(driver, vemAssert, this);
+        amazonStartPage = new AmazonStartPage(driver, tangAssert, this);
         // driver = new ChromeDriver();
     }
 
@@ -82,7 +82,7 @@ public class AmazonMbtTest extends AnyMbtTest {
      * This method implements the Vertex 'v_BrowserStarted'
      */
     public void v_BrowserStarted() {
-        vemAssert.assertNotNull(amazonStartPage.driver, "");
+        tangAssert.assertNotNull(amazonStartPage.driver, "");
     }
 
     /**

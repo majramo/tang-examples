@@ -19,8 +19,8 @@ public class MySqlDbTest extends AnySqlTest {
         dbResult.each {
             Reporter.log(counter++ + " " + it.toString())
         }
-        vemAssert.assertTrue(dbResult.size() > 0, "Result should have some value")
-//        vemAssert.assertTrue(dbResult.size() < 1, "Result should have some value")
+        tangAssert.assertTrue(dbResult.size() > 0, "Result should have some value")
+//        tangAssert.assertTrue(dbResult.size() < 1, "Result should have some value")
     }
 
     @Test(groups = "groupOne", description = "REQ ID = Req abcd")
@@ -71,8 +71,8 @@ public class MySqlDbTest extends AnySqlTest {
         dbResult.each {
             Reporter.log(counter++ + " " + it.toString())
         }
-        vemAssert.assertTrue(dbResult.size() > 0, "Result should have some value")
-//        vemAssert.assertTrue(dbResult.size() < 1, "Result should have some value")
+        tangAssert.assertTrue(dbResult.size() > 0, "Result should have some value")
+//        tangAssert.assertTrue(dbResult.size() < 1, "Result should have some value")
     }
 
     @Test(dataProvider = "tableAndFieldsEqualNull", groups = "data", description = "REQ ID = Req abcd")

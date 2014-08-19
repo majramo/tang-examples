@@ -13,7 +13,7 @@ public class FailedTest extends AnyTest {
         linkedinStartPage.load()
         driver.takeScreenShot("Screen shot on page 1")
         driver.takeScreenShot("Screen shot on page 2")
-        vemAssert.assertTrue(false, "Failing test method")
+        tangAssert.assertTrue(false, "Failing test method")
     }
 
 

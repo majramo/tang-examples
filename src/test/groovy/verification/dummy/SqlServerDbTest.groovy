@@ -17,7 +17,7 @@ public class SqlServerDbTest extends AnySqlTest {
         dbResult.each {
             Reporter.log(counter++ + " " + it.toString())
         }
-        vemAssert.assertTrue(dbResult.size() > 0, "Result should have some value")
+        tangAssert.assertTrue(dbResult.size() > 0, "Result should have some value")
     }
 
 

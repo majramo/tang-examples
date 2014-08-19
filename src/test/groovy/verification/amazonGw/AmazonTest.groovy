@@ -11,7 +11,7 @@ public class AmazonTest extends AnyTest {
 
     @BeforeClass
     public void beforeClass() {
-        amazonStartPage = new AmazonStartPage(driver, vemAssert);
+        amazonStartPage = new AmazonStartPage(driver, tangAssert);
         amazonStartPage.load()
     }
 

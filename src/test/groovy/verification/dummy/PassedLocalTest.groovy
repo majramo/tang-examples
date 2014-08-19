@@ -12,7 +12,7 @@ public class PassedLocalTest extends AnyTest {
         Reporter.log("Open ur: file:///Users/majidaram/dev/tang-examples/src/test/resources/file1.png")
         driver.openUrl("file:///Users/majidaram/dev/tang-examples/src/test/resources/file1.png")
         driver.takeScreenShot("Screen shot")
-        vemAssert.assertTrue(true, "Passed test")
+        tangAssert.assertTrue(true, "Passed test")
     }
 
     @Test(groups = "groupTwo")
@@ -23,7 +23,7 @@ public class PassedLocalTest extends AnyTest {
         Reporter.log("Open ur: file:///Users/majidaram/dev/tang-examples/src/test/resources/file2.png")
         driver.openUrl("file:///Users/majidaram/dev/tang-examples/src/test/resources/file2.png")
         driver.takeScreenShot("Screen shot 2")
-        vemAssert.assertTrue(true, "Passed test")
+        tangAssert.assertTrue(true, "Passed test")
     }
 
 }

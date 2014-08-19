@@ -36,7 +36,7 @@ public class SearchFirstNameAndLastNameAtLinkedInTest extends AnyTest {
         def assertFile = hxve.returnAsserttionFile()
         Reporter.log("See assertFile: " + getHtmlLinkTag(assertFile.toString()) + CR)
         takeScreenshot(!result)
-        vemAssert.assertTrue(result, "Advanced validation result")
+        tangAssert.assertTrue(result, "Advanced validation result")
 
     }
 }

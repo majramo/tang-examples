@@ -92,7 +92,7 @@ public class MultiModelMbtTestRun extends Model_A {
         modelB.driver.quit();
         modelC.driver.quit();
         modelD.driver.quit();
-        vemAssert.assertTrue(modelhandler.isAllModelsDone(), MBT_MODEL_A + ": not all models are done");
+        tangAssert.assertTrue(modelhandler.isAllModelsDone(), MBT_MODEL_A + ": not all models are done");
     }
 
 

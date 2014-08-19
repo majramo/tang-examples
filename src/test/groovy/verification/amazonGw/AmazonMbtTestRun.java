@@ -62,7 +62,7 @@ public class AmazonMbtTestRun extends AmazonMbtTest {
 
         Reporter.log(modelhandler.getStatistics());
         mbtClass.driver.quit();
-        vemAssert.assertTrue(modelhandler.isAllModelsDone(), MBT_MODEL + ": not all models are done");
+        tangAssert.assertTrue(modelhandler.isAllModelsDone(), MBT_MODEL + ": not all models are done");
     }
 
     @Parameters({"browser", "environment"})
@@ -99,7 +99,7 @@ public class AmazonMbtTestRun extends AmazonMbtTest {
 
         Reporter.log(modelhandler.getStatistics());
         mbtClass.driver.quit();
-        vemAssert.assertTrue(modelhandler.isAllModelsDone(), MBT_MODEL + ": not all models are done");
+        tangAssert.assertTrue(modelhandler.isAllModelsDone(), MBT_MODEL + ": not all models are done");
     }
 
     @Parameters({"browser", "environment"})
@@ -136,7 +136,7 @@ public class AmazonMbtTestRun extends AmazonMbtTest {
 
         Reporter.log(modelhandler.getStatistics());
         mbtClass.driver.quit();
-        vemAssert.assertTrue(modelhandler.isAllModelsDone(), MBT_MODEL + ": not all models are done");
+        tangAssert.assertTrue(modelhandler.isAllModelsDone(), MBT_MODEL + ": not all models are done");
     }
 
 }

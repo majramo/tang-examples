@@ -9,7 +9,7 @@ public class PassedTest extends AnyTest {
     public void passTestOne() {
         driver.openUrl("http://www.google.com")
         driver.takeScreenShot("Screen shot")
-        vemAssert.assertTrue(true, "Passed test")
+        tangAssert.assertTrue(true, "Passed test")
         reporterHelper.log("onConfigurationSuccess: beforeSuiteVemHt")
         reporterHelper.log("onConfigurationSuccess: beforeSuiteVemHt")
         reporterHelper.log("")
@@ -25,7 +25,7 @@ public class PassedTest extends AnyTest {
     public void passTestTwo() {
         driver.openUrl("http://www.linkedin.com/")
         driver.takeScreenShot("Screen shot")
-        vemAssert.assertTrue(true, "Passed test")
+        tangAssert.assertTrue(true, "Passed test")
     }
 
 }
