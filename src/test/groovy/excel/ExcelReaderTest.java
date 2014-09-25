@@ -9,17 +9,22 @@ public class ExcelReaderTest {
 
     @Test(dataProvider = "all")
     public void all(ExcelBodyRow excelBodyRow) {
-        Reporter.log("Nr " + excelBodyRow.getColumn("Nr") + " Namn " + excelBodyRow.getColumn("Namn"));
+        Reporter.log("Nr " + excelBodyRow.getColumn("Number") + " Namn " + excelBodyRow.getColumn("Name"));
     }
 
     @Test(dataProvider = "firstTwo")
     public void firstTwo_1(ExcelBodyRow excelBodyRow) {
-        Reporter.log("Nr " + excelBodyRow.getColumn("Nr") + " Namn " + excelBodyRow.getColumn("Namn"));
+        Reporter.log("Nr " + excelBodyRow.getColumn("Number") + " Namn " + excelBodyRow.getColumn("Name"));
     }
 
-    @Test(dataProvider = "firstThree")
-    public void firstThree(ExcelBodyRow excelBodyRow) {
-        Reporter.log("Nr " + excelBodyRow.getColumn("Nr") + " Namn " + excelBodyRow.getColumn("Namn"));
+    @Test(dataProvider = "thirdRow")
+    public void thirdTest(ExcelBodyRow excelBodyRow) {
+        Reporter.log("Nr 3: " + excelBodyRow.getColumn("Number") + " Namn " + excelBodyRow.getColumn("Name"));
+    }
+
+    @Test(dataProvider = "fourthRow")
+    public void fourthTest(ExcelBodyRow excelBodyRow) {
+        Reporter.log("Nr 4: " + excelBodyRow.getColumn("Number") + " Namn " + excelBodyRow.getColumn("Name"));
     }
 
     @Test(dataProvider = "firstTwo")
@@ -29,7 +34,7 @@ public class ExcelReaderTest {
 
     @Test(dataProvider = "firstTwo")
     public void firstTwo_3(ExcelBodyRow excelBodyRow) {
-        Reporter.log("Missing column 'Unknown' " + excelBodyRow.getColumn("Unknown") + " Namn " + excelBodyRow.getColumn("Namn"));
+        Reporter.log("Missing column 'Unknown' " + excelBodyRow.getColumn("Unknown") + " Namn " + excelBodyRow.getColumn("Name"));
     }
 
 
@@ -45,9 +50,13 @@ public class ExcelReaderTest {
     }
 
 
-    @DataProvider(name = "firstThree")
-    public Object[][] getTableFieldChecksFromExcel3() {
+    @DataProvider(name = "thirdRow")
+    public Object[][] getExcelThirdthRow() {
         return (new ExcelFileReader("/excel/excelTestFile1.xls").getBodyRow(3));
     }
 
+    @DataProvider(name = "fourthRow")
+    public Object[][] getExcelFourthRow() {
+        return (new ExcelFileReader("/excel/excelTestFile1.xls").getBodyRow(4));
+    }
 }
