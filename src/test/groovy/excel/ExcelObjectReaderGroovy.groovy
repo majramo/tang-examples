@@ -1,14 +1,19 @@
-package excel;
+package excel
 
-import org.testng.Reporter;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.Reporter
+import org.testng.annotations.DataProvider
+import org.testng.annotations.Test
 
-import static excel.ExcelObjectProvider.*;
+import static excel.ExcelObjectProvider.getObject
+import static excel.ExcelObjectProvider.getObject
+import static excel.ExcelObjectProvider.getObject
+import static excel.ExcelObjectProvider.getObjects
+import static excel.ExcelObjectProvider.getObjects
 
-public class ExcelObjectReaderTest {
-     private final static String[] columns = new String[] {"Number", "Age", "Name", "Gender"};
-     private final static String INPUT_FILE = "/excel/excelTestFile1.xls";
+
+class ExcelObjectReaderGroovy {
+    private final static def columns = ["Number", "Age", "Name", "Gender"];
+    private final static String INPUT_FILE = "/excel/excelTestFile1.xls";
 
     @Test(dataProvider = "all")
     public void all(String number, String name, String age, String gender) {
@@ -70,5 +75,4 @@ public class ExcelObjectReaderTest {
     private void printOut(String number, String name, String age, String gender) {
         Reporter.log("Number: " + number + " Name: " + name + " Age: " + age + " Gender: " + gender);
     }
-
 }
