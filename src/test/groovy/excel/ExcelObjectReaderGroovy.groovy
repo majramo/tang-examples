@@ -5,11 +5,7 @@ import org.testng.annotations.DataProvider
 import org.testng.annotations.Test
 
 import static excel.ExcelObjectProvider.getObject
-import static excel.ExcelObjectProvider.getObject
-import static excel.ExcelObjectProvider.getObject
 import static excel.ExcelObjectProvider.getObjects
-import static excel.ExcelObjectProvider.getObjects
-
 
 class ExcelObjectReaderGroovy {
     private final static def columns = ["Number", "Age", "Name", "Gender"];
