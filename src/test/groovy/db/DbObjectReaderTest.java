@@ -1,11 +1,11 @@
-package excel;
+package db;
 
 import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import static excel.DbObjectProvider.getObject;
-import static excel.DbObjectProvider.getObjects;
+import static db.DbObjectProvider.getObject;
+import static db.DbObjectProvider.getObjects;
 
 public class DbObjectReaderTest {
      private final static String QUERY = "SELECT TOP %s FIRSTNAME, CINT_SOC_SEC_NO_DASHLESS from FilteredContact where not CINT_SOC_SEC_NO_DASHLESS is null ORDER BY 1";
