@@ -30,8 +30,8 @@ class CalculateCheckDigitTest {
                 ["860442020567338"],
                 ["1009109500132"],
                 ["125"],
-//                ["264526771"],
-//                ["264627069"],
+                ["264526771"],
+                ["3114091600119790"],
 //                ["265351785"],
 //                ["265467047"],
 //                ["266314333"],
@@ -42,7 +42,7 @@ class CalculateCheckDigitTest {
     @DataProvider(name = "socialSecurityNumber")
     public Object[][] socialSecurityNumber() {
         [
-                ["8112189876"],
+                ["8910068520"],
                 ["6906123077"],
                 ["5206062043"],
                 ["2907118893"],
@@ -52,6 +52,7 @@ class CalculateCheckDigitTest {
                 ["2112132127"],
                 ["2205163906"],
                 ["2211053927"],
+                ["2211053921"],
         ] as Object[][]
     }
 }
