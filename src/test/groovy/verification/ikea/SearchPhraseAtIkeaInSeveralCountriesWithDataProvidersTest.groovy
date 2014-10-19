@@ -10,6 +10,7 @@ import org.testng.annotations.Test
 import pages.ikea.actions.GivenIkea
 import pages.ikea.actions.ThenIkea
 import pages.ikea.actions.WhenIkea
+import static dtos.base.Constants.dbRunTypeRows;
 
 public class SearchPhraseAtIkeaInSeveralCountriesWithDataProvidersTest extends AnyTest {
     private static final String IKEA_PHRASE_INPUT_FILE = "/ikea/ikeaSearchPhrases.xls"

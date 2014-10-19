@@ -5,7 +5,7 @@
 
     <groupId>org.tang</groupId>
     <artifactId>tang-examples</artifactId>
-    <version>0.0.85-SNAPSHOT</version>
+    <version>0.0.86-SNAPSHOT</version>
     <name>tang-examples</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
