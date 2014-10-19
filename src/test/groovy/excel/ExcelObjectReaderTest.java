@@ -16,7 +16,7 @@ public class ExcelObjectReaderTest {
     }
 
     @Test(dataProvider = "firstTwo")
-    public void fristTwo(String number, String name, String age, String gender) {
+    public void firstTwo(String number, String name, String age, String gender) {
         printOut(number, name, age, gender);
     }
 
