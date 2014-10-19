@@ -40,9 +40,19 @@ public class AllTest extends AnyTest {
     }
 
     @Test(groups = "groupOne", description = "REQ ID = Failed Test")
-    public void failTestOne(ITestContext iTestContext) {
+    public void failTestFive(ITestContext iTestContext) {
         super.getDbResult(iTestContext, "Select * from IkeaSearchPhrases;", "Get data from table")
         super.getDbResult(iTestContext, "sqlServer", "Select * from IkeaSearchPhrases;", "Get data from table")
+        LinkedInStartPage linkedinStartPage = new LinkedInStartPage(driver)
+        linkedinStartPage.load()
+        takeScreenshot("Screen shot on page 1")
+        tangAssert.assertTrue(false, "Failing test method")
+    }
+
+    @Test(groups = "groupOne", description = "REQ ID = Failed Test")
+    public void failTestFour(ITestContext iTestContext) {
+        super.getDbResult(iTestContext, "Select * from IkeaSearchPhrases;", "Get data from table")
+        super.getDbResult(iTestContext, "oracle", "Select * from IkeaSearchPhrases;", "Get data from table")
         LinkedInStartPage linkedinStartPage = new LinkedInStartPage(driver)
         linkedinStartPage.load()
         takeScreenshot("Screen shot on page 1")

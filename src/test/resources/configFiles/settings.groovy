@@ -37,6 +37,10 @@ jdbcMySqlUrl = "//localhost:3306"
 jdbcMySqlUserName = "root"
 jdbcMySqlPassword = "vem"
 
+jdbcSqlServerUrl = "//localhost:3306"
+jdbcSqlServerUserName = "root"
+jdbcSqlServerPassword = "vem"
+
 mySqlDb {
     dbDriverName = jdbcMySqlDriverName
     dbDriver = jdbcMySqlServerDriver
@@ -49,10 +53,19 @@ mySqlDb {
 sqlServer {
     dbDriverName = jdbcSqlDriverName
     dbDriver = jdbcMySqlServerDriver
-    dbUrl = jdbcMySqlUrl
-    dbUserName = jdbcMySqlUserName
-    dbPassword = jdbcMySqlPassword
-    dbTestDataBase = "mysql"
+    dbUrl = jdbcSqlServerUrl
+    dbUserName = jdbcSqlServerUserName
+    dbPassword = jdbcSqlServerPassword
+    dbTestDataBase = jdbcSqlServerPassword
+}
+
+oracle {
+    dbDriverName = jdbcOracleDriverName
+    dbDriver = jdbcOracleDriver
+    dbUrl = jdbcSqlServerUrl
+    dbUserName = jdbcSqlServerUserName
+    dbPassword = jdbcSqlServerPassword
+    dbTestDataBase = jdbcSqlServerPassword
 }
 
 h2Db {
