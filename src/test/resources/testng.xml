@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="tests" thread-count="3">
-	<test name="Test Google FireFox">
-		<classes>
-			<class name="verification.dummy.FailedTest" />
-		</classes>
-	</test> <!-- Test -->
-	  Test -->
+<suite name="Suite" parallel="tests" thread-count="5">
+    <test name="Test Google Firefox" enabled="true">
+        <parameter name="browser" value="LOCAL_FIREFOX"></parameter>
+        <classes>
+            <class name="verification.dummy.AllTest"/>
+            <class name="verification.dummy.PassedTest"/>
+            <class name="verification.dummy.DummyTest"/>
+            <class name="verification.dummy.SqlServerDbTest"/>
+        </classes>
+    </test> <!-- Test -->
 </suite> <!-- Suite -->
