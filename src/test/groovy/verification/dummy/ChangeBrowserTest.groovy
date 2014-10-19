@@ -9,7 +9,7 @@ import static corebase.GlobalConstants.*
 public class ChangeBrowserTest extends AnyTest {
     private LinkedInStartPage linkedInStartPage
 
-    @Test(groups = "groupOne", description = "REQ ID = Failed Test")
+//    @Test(groups = "groupOne", description = "REQ ID = Failed Test")
     public void changeBrowser() {
         linkedInStartPage = new LinkedInStartPage(driver)
         goLinkedInAndTakeScreenShot(driver, "Default")

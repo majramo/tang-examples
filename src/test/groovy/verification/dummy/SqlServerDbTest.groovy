@@ -3,6 +3,7 @@ package verification.dummy
 import base.AnySqlTest
 import org.testng.ITestContext
 import org.testng.Reporter
+import org.testng.SkipException
 import org.testng.annotations.Test
 
 import static dtos.base.Constants.dbRunTypeRows
@@ -45,5 +46,13 @@ public class SqlServerDbTest extends AnySqlTest {
         }
         tangAssert.assertTrue(dbResult.size() == 0, "Result should have no entries")
     }
+
+    @Test(groups = "groupOne", description = "REQ ID = Req abcd")
+    public void skipTest(ITestContext iTestContext) {
+        throw new SkipException("Just skipped")
+
+    }
+
+
 
 }

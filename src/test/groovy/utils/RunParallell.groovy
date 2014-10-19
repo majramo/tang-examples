@@ -6,7 +6,6 @@ import org.testng.xml.XmlPackage
 import org.testng.xml.XmlSuite
 import org.testng.xml.XmlTest
 import reports.TangHtmlReporter
-import verification.dummy.FailedTest
 
 public class RunParallell {
     private static ArrayList<String> groups = new ArrayList<String>();
@@ -31,7 +30,7 @@ public class RunParallell {
 //        testXmlClasses.add(new XmlClass(TestDressingBloggTest))
 //        testXmlClasses.add(new XmlClass("verification.ikea.SearchPhraseInSeveralCountriesStaticDataproviderAtIkeaTest"))
 //        testXmlClasses.add(new XmlClass(SearchPhraseAtIkeaInSeveralCountriesWithDataProvidersTest))
-        testXmlClasses.add(new XmlClass(FailedTest))
+//        testXmlClasses.add(new XmlClass(FailedTest))
 
     }
 
