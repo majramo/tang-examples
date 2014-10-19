@@ -10,7 +10,7 @@ defaultBrowser = LOCAL_FIREFOX
 //defaultBrowser = LOCAL_SAFARI
 
 dbRun = true
-guiRun = true
+guiRun = false
 maxAyyaySizeToWorkWith = 50
 
 CHROME_DRIVER_PATH.MAC = "drivers/chromedriver"
@@ -39,6 +39,15 @@ jdbcMySqlPassword = "vem"
 
 mySqlDb {
     dbDriverName = jdbcMySqlDriverName
+    dbDriver = jdbcMySqlServerDriver
+    dbUrl = jdbcMySqlUrl
+    dbUserName = jdbcMySqlUserName
+    dbPassword = jdbcMySqlPassword
+    dbTestDataBase = "mysql"
+}
+
+sqlServer {
+    dbDriverName = jdbcSqlDriverName
     dbDriver = jdbcMySqlServerDriver
     dbUrl = jdbcMySqlUrl
     dbUserName = jdbcMySqlUserName
