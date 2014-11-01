@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Scenario 2 database provider">
+<suite name="Scenario 2 static dataprovider">
     <test name="Test 1" enabled="true">
         <parameter name="browser" value="LOCAL_FIREFOX"></parameter>
         <classes>
-            <class name="verification.ikea.SearchPhraseAtIkeaInSeveralCountriesWithDataProvidersTest"/>
+            <class name="verification.dummy.SqlServerDbTest"/>
         </classes>
     </test>
 </suite> <!-- Suite -->

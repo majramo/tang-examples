@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Scenario 2 static dataprovider" parallel="tests" thread-count="2">
+    <test name="Test db 1" enabled="true">
+        <parameter name="browser" value="LOCAL_FIREFOX"></parameter>
+        <classes>
+            <class name="verification.dummy.SqlServerDbTest"/>
+        </classes>
+    </test>
+    <test name="Test db 2" enabled="true">
+        <parameter name="browser" value="LOCAL_FIREFOX"></parameter>
+        <classes>
+            <class name="verification.dummy.SqlServerDbTest"/>
+        </classes>
+    </test>
+    <test name="Test db 3" enabled="true">
+        <parameter name="browser" value="LOCAL_FIREFOX"></parameter>
+        <classes>
+            <class name="verification.dummy.SqlServerDbTest"/>
+        </classes>
+    </test>
+    <test name="Test FF 1" enabled="true">
+        <parameter name="browser" value="LOCAL_FIREFOX"></parameter>
+        <classes>
+            <class name="verification.ikea.SearchPhraseInSeveralCountriesStaticDataproviderAtIkeaTest"/>
+        </classes>
+    </test>
+    <test name="Test FF 2" enabled="true">
+        <parameter name="browser" value="LOCAL_FIREFOX"></parameter>
+        <classes>
+            <class name="verification.ikea.SearchPhraseInSeveralCountriesStaticDataproviderAtIkeaTest"/>
+        </classes>
+    </test>
+    <test name="Test FF 3" enabled="true">
+        <parameter name="browser" value="LOCAL_FIREFOX"></parameter>
+        <classes>
+            <class name="verification.ikea.SearchPhraseInSeveralCountriesStaticDataproviderAtIkeaTest"/>
+        </classes>
+    </test>
+</suite> <!-- Suite -->

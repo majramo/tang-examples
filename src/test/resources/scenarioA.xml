@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Scenario 2 static dataprovider">
     <test name="Test 1" enabled="true">
-        <parameter name="browser" value="Firefox"></parameter>
+        <parameter name="browser" value="LOCAL_FIREFOX"></parameter>
         <classes>
             <class name="verification.ikea.SearchPhraseInSeveralCountriesStaticDataproviderAtIkeaTest"/>
         </classes>
