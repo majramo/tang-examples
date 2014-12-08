@@ -10,7 +10,7 @@ defaultBrowser = LOCAL_FIREFOX
 //defaultBrowser = LOCAL_SAFARI
 
 dbRun = true
-guiRun = false
+guiRun = true
 maxAyyaySizeToWorkWith = 50
 
 CHROME_DRIVER_PATH.MAC = "drivers/chromedriver"

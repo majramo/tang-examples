@@ -4,7 +4,7 @@
     <test name="Test Google Firefox" enabled="true">
         <parameter name="browser" value="LOCAL_FIREFOX"></parameter>
         <classes>
-            <class name="verification.dummy.AllTest"/>
+            <class name="verification.demo.FailedTest"/>
             <class name="verification.dummy.PassedTest"/>
             <class name="verification.dummy.DummyTest"/>
             <class name="verification.dummy.SqlServerDbTest"/>
