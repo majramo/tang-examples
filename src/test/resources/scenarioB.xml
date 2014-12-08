@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Scenario B parallell test run" parallel="tests" thread-count="3">
+
+    <test name="TSD 1" enabled="true">
+        <classes>
+            <class name="verification.demo.PassedTest"/>
+        </classes>
+    </test>
+    <test name="TSD 2" enabled="true">
+        <classes>
+            <class name="verification.demo.FailedTest"/>
+        </classes>
+    </test>
+    <test name="TSD 3" enabled="true">
+        <classes>
+            <class name="verification.demo.SkippedTest"/>
+        </classes>
+    </test>
+</suite> <!-- Suite -->

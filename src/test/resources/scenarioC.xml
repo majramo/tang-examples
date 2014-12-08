@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Scenario C parallell test run" parallel="tests" thread-count="3">
+
+    <test name="ATDD 1" enabled="true">
+        <classes>
+            <class name="com.talios.TestFactoryLinkedIn"/>
+        </classes>
+    </test>
+
+    <!--<test name="TS 1" enabled="true">-->
+        <!--<classes>-->
+            <!--<class name="verification.demo.PassedTest"/>-->
+        <!--</classes>-->
+    <!--</test>-->
+
+    <!--<test name="TS 2" enabled="true">-->
+        <!--<classes>-->
+            <!--<class name="verification.demo.PassedTest"/>-->
+            <!--<class name="verification.demo.FailedTest"/>-->
+        <!--</classes>-->
+    <!--</test>-->
+
+
+</suite> <!-- Suite -->
