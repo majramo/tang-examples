@@ -25,7 +25,7 @@ public class CompareWebFileImagesTest extends AnyTest {
 //            firefoxBrowserImageFile = fileUtilsHelper.loadResourceFile("/images/firefoxBrowserImage.png")
             driver.quit()
 
-            driver.changeBrowserToSafari()
+            driver.changeBrowserToChrome()
             driver.openUrl("https://www.google.se/#q=majid+aram&safe=active")
             driver.waitForPageReadyStateComplete()
             safariBrowserImageFile = driver.takeScreenShot("Safari Search + majid +aram")

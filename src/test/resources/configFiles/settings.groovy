@@ -1,7 +1,5 @@
 package configFiles
 
-import org.eclipse.core.internal.filesystem.local.LocalFile
-
 import static corebase.GlobalConstants.*
 
 defaultBrowser = LOCAL_FIREFOX
@@ -10,7 +8,7 @@ defaultBrowser = LOCAL_FIREFOX
 //defaultBrowser = LOCAL_SAFARI
 
 dbRun = true
-guiRun = false
+guiRun = true
 maxAyyaySizeToWorkWith = 50
 
 CHROME_DRIVER_PATH.MAC = "drivers/chromedriver"
@@ -119,6 +117,7 @@ AsssertionsDiff {
 }
 
 webDrivers = [
+        [LOCAL_HTML_UNIT, LOCAL, HTMLUNIT, "", ""],
         ["COMPANY_HUB_FIREFOX", COMPANY_HUB, FIREFOX, "", ""],
         ["COMPANY_HUB_FIREFOX_19", COMPANY_HUB, FIREFOX, "19", ""],
         ["COMPANY_HUB_FIREFOX_19", COMPANY_HUB, FIREFOX, "19", ""],
@@ -126,6 +125,7 @@ webDrivers = [
         [LOCAL_SAFARI, LOCAL, SAFARI, "", ""],
         [LOCAL_CHROME, LOCAL, CHROME, "", ""],
         [LOCAL_INTERNET_EXPLORER, LOCAL, INTERNET_EXPLORER, "", ""],
+        [LOCAL_HTML_UNIT, LOCAL, HTMLUNIT, "", ""],
         ["SAUCELABS_HUB_ANDROID_5_0_SL_LINUX", SAUCELABS_HUB, ANDROID, "5.0", "LINUX"],
         ["SAUCELABS_HUB_ANDROID_4_0", SAUCELABS_HUB, ANDROID, "4.0", ""],
         ["SAUCELABS_HUB_ANDROID_4_0", SAUCELABS_HUB, ANDROID, "4.0", ""],
