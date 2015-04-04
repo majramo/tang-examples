@@ -22,21 +22,21 @@ public class CompareWebFileImagesTest extends AnyTest {
             driver.openUrl("https://www.google.se/#q=majid+aram&safe=active")
             driver.waitForPageReadyStateComplete()
             firefoxBrowserImageFile = driver.takeScreenShot("Firefox Search + majid +aram")
-//            firefoxBrowserImageFile1 = fileUtilsHelper.loadResourceFile("/images/firefoxBrowserImage.png")
-            driver.close()
+//            firefoxBrowserImageFile = fileUtilsHelper.loadResourceFile("/images/firefoxBrowserImage.png")
+            driver.quit()
 
             driver.changeBrowserToChrome()
             driver.openUrl("https://www.google.se/#q=majid+aram&safe=active")
             driver.waitForPageReadyStateComplete()
             safariBrowserImageFile = driver.takeScreenShot("Safari Search + majid +aram")
-//            firefoxBrowserImageFile3 = fileUtilsHelper.loadResourceFile("/images/safariBrowserImage.png")
-            driver.close()
+//            safariBrowserImageFile = fileUtilsHelper.loadResourceFile("/images/safariBrowserImage.png")
+            driver.quit()
 
             driver.changeBrowserToChrome()
             driver.openUrl("https://www.google.se/#q=majid+aram&safe=active")
             driver.waitForPageReadyStateComplete()
             chromeBrowserImageFile = driver.takeScreenShot("Chrome Search + majid +aram")
-//            firefoxBrowserImageFile2 = fileUtilsHelper.loadResourceFile("/images/chromeBrowserImage.png")
+//            chromeBrowserImageFile = fileUtilsHelper.loadResourceFile("/images/chromeBrowserImage.png")
             driver.quit()
 
             //TODO: fix chrome och IE start
