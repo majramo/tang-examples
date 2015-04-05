@@ -146,3 +146,5 @@ webDrivers = [
 
 pkdiff.MAC="/app/perceptualdiff"
 pkdiff.WIN="/app/perceptualdiff.exe"
+
+iconsSourceDir="src/test/resources/icons"
