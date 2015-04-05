@@ -5,7 +5,7 @@
 
     <groupId>org.tang</groupId>
     <artifactId>tang-examples</artifactId>
-    <version>0.0.87-SNAPSHOT</version>
+    <version>0.0.88-SNAPSHOT</version>
     <name>tang-examples</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,12 +16,12 @@
         <dependency>
             <groupId>org.tang</groupId>
             <artifactId>core</artifactId>
-            <version>0.0.87-SNAPSHOT</version>
+            <version>0.0.88-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.tang</groupId>
             <artifactId>common</artifactId>
-            <version>0.0.87-SNAPSHOT</version>
+            <version>0.0.88-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
