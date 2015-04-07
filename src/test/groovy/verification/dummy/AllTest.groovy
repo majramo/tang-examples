@@ -28,7 +28,7 @@ public class AllTest extends AnyTest {
     public void failTestThree(ITestContext iTestContext) {
         driver.openUrl("http://www.linkedin.com")
 
-        driver.type("//elemnetUnkonwon", "Some text")
+        driver.type("//unknownElement", "Some text")
     }
 
 
