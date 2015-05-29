@@ -16,7 +16,7 @@ CHROME_DRIVER_PATH.WIN = "drivers/chromedriver.exe"
 IE_DRIVER_PATH.MAC = "drivers/IEDriverServer_x64_2.42.0.exe"
 IE_DRIVER_PATH.WIN = "drivers/IEDriverServer_x64_2.42.0.exe"
 
-firefoxProfileFolder = ""
+firefoxProfileFolder = "seleniumProfile"
 // ==>Database setting
 localDb = 'jdbc:h2'
 jdbcSqlServerDriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"
