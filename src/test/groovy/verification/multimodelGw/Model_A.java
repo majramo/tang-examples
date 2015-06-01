@@ -20,6 +20,7 @@ public class Model_A extends AnyMbtTest {
      *
      */
     public void e_A() throws InterruptedException {
+
         sleep(SLEEP);
     }
 
@@ -29,6 +30,7 @@ public class Model_A extends AnyMbtTest {
      *
      */
     public void e_B() throws InterruptedException {
+
         sleep(SLEEP);
     }
 
@@ -38,6 +40,7 @@ public class Model_A extends AnyMbtTest {
      *
      */
     public void v_A() throws InterruptedException {
+
         sleep(SLEEP);
     }
 
@@ -49,6 +52,7 @@ public class Model_A extends AnyMbtTest {
      *
      */
     public void v_B() throws InterruptedException {
+
         sleep(SLEEP);
     }
 

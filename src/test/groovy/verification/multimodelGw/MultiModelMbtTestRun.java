@@ -73,7 +73,7 @@ public class MultiModelMbtTestRun extends Model_A {
             modelhandler.add(MBT_MODEL_A, modelA);
             modelhandler.add(MBT_MODEL_B, modelB);
             modelhandler.add(MBT_MODEL_C, modelC);
-//            modelhandler.add(MBT_MODEL_D, modelD);
+            modelhandler.add(MBT_MODEL_D, modelD);
         } catch (Exception exception) {
             Reporter.log("Can't load model <" + Model_A.class.getName() + ">");
             Reporter.log(exception.toString());

@@ -11,8 +11,9 @@ public class AmazonStartPage extends AnyPage {
     private static final String PAGE_URL = "http://www.amazon.com"
     private static final String ADD_BOOK_TO_CART = "//*[@id = 'bb_atc_button']"
     private static final String SEARCH_INPUT_FIELD = "//*[@id='twotabsearchtextbox']"
-    private static final String SEARCH_BUTTON = "//*[@id='nav-bar-inner']/div/form/div[2]/input"
-    private static final String SEARCH_RESUTLS = "//*[contains(@id,'result_')]//h3/a"
+    private static final String SEARCH_BUTTON = "//*[@id='nav-search']/form/div[2]/div/input"
+    private static final String SEARCH_RESUTLS_TEXT = "//*[contains(@id,'result')]//a"
+    private static final String SEARCH_RESUTLS_LIST = "//*[contains(@id,'result')]//a/h2"
     private static final String CUSTOMER_WHO_BOUGHT = "//*[@id='hlb-upsell']/div/h2/i"
     private static final String SHOPPING_CART_LINK = "//*[@id=\"nav-cart\"]"
     private static final String EMPTY_SHOPPING_BAG = "//*[contains(text(),'Your Shopping Cart is empty')]"
@@ -49,7 +50,7 @@ public class AmazonStartPage extends AnyPage {
      * This method implements the Edge 'e_ClickBook'
      */
     public void e_ClickBook() {
-        driver.click(SEARCH_RESUTLS + "[contains(@href,'Practical')]");
+        driver.click(SEARCH_RESUTLS_LIST + "[contains(@href,'Practical')]");
     }
 
     /**
@@ -77,6 +78,7 @@ public class AmazonStartPage extends AnyPage {
      * This method implements the Edge 'e_ShoppingCart'
      */
     public void e_ShoppingCart() {
+        driver.click(SHOPPING_CART_LINK)
         driver.click(SHOPPING_CART_LINK)
     }
 
@@ -122,8 +124,8 @@ public class AmazonStartPage extends AnyPage {
      * This method implements the Vertex 'v_SearchResult'
      */
     public void v_SearchResult() {
-        tangAssert.assertTrue(driver.isTagAvailable(SEARCH_RESUTLS), "The book tag");
-        tangAssert.assertTrue(driver.isTextPresent(SEARCH_RESUTLS, PRACTICAL_MBT_BOOK_NAME), "Book " + PRACTICAL_MBT_BOOK_NAME);
+        tangAssert.assertTrue(driver.isTagAvailable(SEARCH_RESUTLS_TEXT), "The book tag");
+        tangAssert.assertTrue(driver.isTextPresent(SEARCH_RESUTLS_LIST, PRACTICAL_MBT_BOOK_NAME), "Book " + PRACTICAL_MBT_BOOK_NAME);
 
     }
 

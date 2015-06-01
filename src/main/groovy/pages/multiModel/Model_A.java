@@ -13,16 +13,17 @@ public class Model_A extends org.graphwalker.multipleModels.ModelAPI {
 
   /**
    * This method implements the Edge 'e_A'
-   * 
+   *
    */
   public void e_A() throws InterruptedException {
-    Thread.sleep(500);
+
+      Thread.sleep(500);
   }
 
 
   /**
    * This method implements the Edge 'e_B'
-   * 
+   *
    */
   public void e_B() throws InterruptedException {
     Thread.sleep(500);
@@ -31,7 +32,7 @@ public class Model_A extends org.graphwalker.multipleModels.ModelAPI {
 
   /**
    * This method implements the Vertex 'v_A'
-   * 
+   *
    */
   public void v_A() throws InterruptedException {
     Thread.sleep(500);
@@ -40,7 +41,7 @@ public class Model_A extends org.graphwalker.multipleModels.ModelAPI {
 
   /**
    * This method implements the Vertex 'v_B'
-   * 
+   *
    */
   public void v_B() throws InterruptedException {
     Thread.sleep(500);
