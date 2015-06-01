@@ -7,7 +7,7 @@ defaultBrowser = LOCAL_FIREFOX
 //defaultBrowser = LOCAL_CHROME
 //defaultBrowser = LOCAL_SAFARI
 
-dbRun = true
+dbRun = false
 guiRun = true
 maxAyyaySizeToWorkWith = 50
 
@@ -94,7 +94,7 @@ configFiles {
 }
 
 // ==>Path
-outputDir = "/tmp/tang/"
+outputDir = "/tmp/tang-examples/"
 SprintPath = outputDir + 'tang-report/'
 HtmlXmlSourceFilesPath = 'htmlXmlSourceFiles/'
 FlowFilesPath = 'flow/'

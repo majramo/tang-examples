@@ -2,7 +2,6 @@ package verification.ikea
 
 import base.AnyTest
 import org.testng.Reporter
-import org.testng.SkipException
 import org.testng.annotations.BeforeClass
 import org.testng.annotations.BeforeMethod
 import org.testng.annotations.DataProvider

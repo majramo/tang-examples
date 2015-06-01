@@ -7,19 +7,19 @@ import org.testng.annotations.DataProvider
 import org.testng.annotations.Test
 import pages.google.GivenGoogle
 import pages.google.ThenGoogle
-import pages.google.WhenGroovy
+import pages.google.WhenGoogle
 
 import static org.testng.Reporter.log
 
 public class SearchAtGoogleWithDataProviderTest extends AnyTest {
-    WhenGroovy when
+    WhenGoogle when
     GivenGoogle given
     ThenGoogle then
 
     @BeforeClass
     public void beforeClass() {
         given = new GivenGoogle(driver)
-        when = new WhenGroovy(driver)
+        when = new WhenGoogle(driver)
         then = new ThenGoogle(driver)
     }
 
@@ -66,11 +66,11 @@ public class SearchAtGoogleWithDataProviderTest extends AnyTest {
         String[] search5 = ["Majid", "Aram", "Vem", "Automation", "Test", "kalle anka"]
 
         return [
-                [search1, new Integer(10)],
+                [search1, new Integer(9)],
                 [search2, new Integer(2)],
                 [search3, new Integer(2)],
                 [search4, new Integer(2)],
-                [search5, new Integer(10)],
+                [search5, new Integer(5)],
         ] as Object[][]
     }
 

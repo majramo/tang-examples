@@ -1,4 +1,4 @@
-package verification.linkedinvalidationwithdb
+package verification.linkedin
 
 import base.AnyTest
 import corebase.HtmlXmlValidationEngine

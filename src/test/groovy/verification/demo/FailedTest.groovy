@@ -2,9 +2,7 @@ package verification.demo
 
 import base.AnyTest
 import org.testng.ITestContext
-import org.testng.SkipException
 import org.testng.annotations.Test
-import pages.linkedin.LinkedInStartPage
 
 public class FailedTest extends AnyTest {
 

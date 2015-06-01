@@ -1,7 +1,6 @@
 package verification.dummy
 
 import base.AnyTest
-import org.testng.annotations.Test
 import pages.linkedin.LinkedInStartPage
 
 import static corebase.GlobalConstants.*

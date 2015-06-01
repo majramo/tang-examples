@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeMethod
 import org.testng.annotations.Test
 import pages.google.GivenGoogle
 import pages.google.ThenGoogle
-import pages.google.WhenGroovy
+import pages.google.WhenGoogle
 
 import static org.testng.Reporter.log
 
@@ -18,14 +18,14 @@ public class SearchAtGoogleTest extends AnyTest {
     private static final String VEM = "Vem"
     private static final String WIKIPEDIA_STR = "Wikipedia"
     private static final Q = '"'
-    WhenGroovy when
+    WhenGoogle when
     GivenGoogle given
     ThenGoogle then
 
     @BeforeClass
     public void beforeClass() {
         given = new GivenGoogle(driver)
-        when = new WhenGroovy(driver)
+        when = new WhenGoogle(driver)
         then = new ThenGoogle(driver)
     }
 
@@ -36,7 +36,7 @@ public class SearchAtGoogleTest extends AnyTest {
 
     @Test
     public void verifyResultContainsSearchStringTestAutomation() {
-        final int HITS_ON_PAGE = 10
+        final int HITS_ON_PAGE = 1
         log("Search: <$TEST_AUTOMATION $WIKIPEDIA_STR>")
         log("hitsOnPage: <$HITS_ON_PAGE>")
         when.typeValueAndClickSearch(TEST_AUTOMATION, WIKIPEDIA_STR)
@@ -47,7 +47,7 @@ public class SearchAtGoogleTest extends AnyTest {
 
     @Test
     public void verifyResultContainsSearchStringMajidAram() {
-        final int HITS_ON_PAGE = 10
+        final int HITS_ON_PAGE = 8
         log("Search: <$MAJID $ARAM>")
         log("hitsOnPage: <$HITS_ON_PAGE>")
         when.typeValueAndClickSearch(MAJID, ARAM)
@@ -58,7 +58,7 @@ public class SearchAtGoogleTest extends AnyTest {
 
     @Test
     public void verifyResultContainsSearchStringVemMajidAram() {
-        final int HITS_ON_PAGE = 10
+        final int HITS_ON_PAGE = 8
         log("Search: <$VEM $MAJID $ARAM>")
         log("hitsOnPage: <$HITS_ON_PAGE>")
         when.typeValueAndClickSearch(VEM, MAJID, ARAM)
@@ -69,7 +69,7 @@ public class SearchAtGoogleTest extends AnyTest {
 
     @Test
     public void verifyResultContainsSearchStringVem() {
-        final int HITS_ON_PAGE = 10
+        final int HITS_ON_PAGE = 8
         log("Search: <$VEM>")
         log("hitsOnPage: <$HITS_ON_PAGE>")
         when.typeValueAndClickSearch(VEM)

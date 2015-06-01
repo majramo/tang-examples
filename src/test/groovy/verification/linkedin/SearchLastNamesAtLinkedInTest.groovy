@@ -1,4 +1,4 @@
-package verification.linkedinWithDataProvider
+package verification.linkedin
 
 import base.AnyTest
 import org.testng.Assert

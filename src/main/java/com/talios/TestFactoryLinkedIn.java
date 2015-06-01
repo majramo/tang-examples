@@ -11,8 +11,7 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Factory;
-import pages.linkedin.LinkedInSearchResultPage;
-import pages.linkedin.LinkedInStartPage;
+import pages.linkedin.*;
 
 import java.io.File;
 

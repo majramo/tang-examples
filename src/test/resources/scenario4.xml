@@ -4,7 +4,7 @@
     <test name="Test 1" enabled="true">
         <parameter name="browser" value="LOCAL_FIREFOX"></parameter>
         <classes>
-            <class name="verification.linkedinvalidationwithdb.SearchFirstNameAndLastNameAtLinkedInDbTest"/>
+            <class name="verification.linkedin.SearchFirstNameAndLastNameAtLinkedInDbTest"/>
         </classes>
     </test>
 </suite> <!-- Suite -->
