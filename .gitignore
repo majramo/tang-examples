@@ -44,6 +44,8 @@ velocity.log
 images/*
 log/*
 target/*
+seleniumProfile/*
+seleniumIdeProfile/*
 
 
 
