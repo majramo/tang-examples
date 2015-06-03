@@ -6,6 +6,7 @@ defaultBrowser = LOCAL_FIREFOX
 //defaultBrowser = LOCAL_INTERNET_EXPLORER
 //defaultBrowser = LOCAL_CHROME
 //defaultBrowser = LOCAL_SAFARI
+//defaultBrowser = LOCAL_HTML_UNIT
 
 dbRun = false
 guiRun = true

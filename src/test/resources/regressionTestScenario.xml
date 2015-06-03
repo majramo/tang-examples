@@ -9,7 +9,7 @@
         </classes>
     </test> <!-- Test -->
 
-    <test name="Test Failed" enabled="true">
+    <test name="Test Failed" enabled="false">
         <!--<parameter name="browser" value="LOCAL_HTML_UNIT"></parameter>-->
         <classes>
             <class name="verification.demo.FailedTest"/>
