@@ -10,12 +10,12 @@ import pages.linkedin.LinkedInStartPage
 
 public class SearchLastNamesAtLinkedInTest extends AnyTest {
 
-    private LinkedInStartPage linkedinStartPage
+    private LinkedInStartPage linkedInStartPage
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethod() {
-        linkedinStartPage = new LinkedInStartPage(driver)
-        linkedinStartPage.load()
+        linkedInStartPage = new LinkedInStartPage(driver)
+        linkedInStartPage.load()
     }
 
     @DataProvider(name = "test1")
@@ -37,10 +37,10 @@ public class SearchLastNamesAtLinkedInTest extends AnyTest {
 
     @Test(dataProvider = "test1")
     public void searchByLastNameTest(String lastName, Integer searchCount) {
-        linkedinStartPage.typeSearchFirstName("")
-        linkedinStartPage.typeSearchLastName(lastName)
-        LinkedInSearchResultPage linkedInSearchResultPage = linkedinStartPage.clickSeacrh()
-        Assert.assertTrue(linkedInSearchResultPage.getTextOfFoundPersons().contains(lastName), "Verify lastname is in text " + lastName)
+        linkedInStartPage.typeSearchFirstName("")
+        linkedInStartPage.typeSearchLastName(lastName)
+        LinkedInSearchResultPage linkedInSearchResultPage = linkedInStartPage.clickSeacrh()
+        Assert.assertTrue(linkedInSearchResultPage.getTextOfFoundPersons().contains(lastName), "Verify lastName is in text " + lastName)
         Assert.assertTrue((linkedInSearchResultPage.getNumberOfFoundPersons() > searchCount), "Verify number of profiles is more than " + searchCount)
     }
 

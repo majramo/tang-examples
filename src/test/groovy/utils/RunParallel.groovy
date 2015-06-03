@@ -7,13 +7,13 @@ import org.testng.xml.XmlSuite
 import org.testng.xml.XmlTest
 import reports.TangHtmlReporter
 
-public class RunParallell {
+public class RunParallel {
     private static ArrayList<String> groups = new ArrayList<String>();
     private static ArrayList<String> excludedGroups = new ArrayList<String>();
     private static ArrayList<XmlClass> testXmlClasses = new ArrayList<XmlClass>();
     private static ArrayList<XmlPackage> testXmlPackage = new ArrayList<XmlPackage>();
 
-    private static final Logger logger = Logger.getLogger("RunParallell");
+    private static final Logger logger = Logger.getLogger("RunParallel");
 
     private static final int THREAD_COUNT = 6;
     private static final int SUITE_THREAD_POOL_SIZE = 6;
@@ -27,8 +27,7 @@ public class RunParallell {
 
     private static void setUpClasses() {
 //        testXmlClasses.add(new XmlClass(MultiModelMbtTestRun))
-//        testXmlClasses.add(new XmlClass(TestDressingBloggTest))
-//        testXmlClasses.add(new XmlClass("verification.ikea.SearchPhraseInSeveralCountriesStaticDataproviderAtIkeaTest"))
+//        testXmlClasses.add(new XmlClass("verification.ikea.SearchPhraseInSeveralCountriesStaticDataProviderAtIkeaTest"))
 //        testXmlClasses.add(new XmlClass(SearchPhraseAtIkeaInSeveralCountriesWithDataProvidersTest))
 //        testXmlClasses.add(new XmlClass(FailedTest))
 
@@ -92,8 +91,7 @@ public class RunParallell {
         setUpExcludedGroups()
         setUpGroups()
 
-        getXmlSuitess(allXmlSuites, environments, browsers)
-        //getXmlSuitess(allXmlSuites, browsers, environments)
+        getXmlSuites(allXmlSuites, environments, browsers)
 
         TestNG tng = new TestNG();
         tng.setSuiteThreadPoolSize(SUITE_THREAD_POOL_SIZE);
@@ -104,9 +102,9 @@ public class RunParallell {
         logger.info(allXmlSuites.toArray());
 
 
-        XmlSuite parallellSuite = convertToOneParallellSuite(allXmlSuites, 10, SUITE_NAME);
+        XmlSuite parallelSuite = convertToOneParallelSuite(allXmlSuites, 10, SUITE_NAME);
         writeTestNgXmlFiles(allXmlSuites);
-//        writeTestNgXmlFiles(parallellSuite);
+//        writeTestNgXmlFiles(parallelSuite);
 
         tng.setXmlSuites(allXmlSuites);
 
@@ -126,7 +124,7 @@ public class RunParallell {
     }
 
 
-    private static void getXmlSuitess(ArrayList<XmlSuite> allXmlSuites, Parameters p1, Parameters p2) {
+    private static void getXmlSuites(ArrayList<XmlSuite> allXmlSuites, Parameters p1, Parameters p2) {
         if (p1.values.size() > 0) {
             Iterator<String> valueItr = p1.values.iterator();
             while (valueItr.hasNext()) {
@@ -173,7 +171,7 @@ public class RunParallell {
         XmlSuite xmlSuite = createXmlSuite();
 
 
-        String suiteName = replaceUnneccerayChars(value + "." + String.format("%05d", Integer.parseInt(suiteCounter++ + "")) + "." + SUITE_TAG)
+        String suiteName = replaceUnnecessaryChars(value + "." + String.format("%05d", Integer.parseInt(suiteCounter++ + "")) + "." + SUITE_TAG)
 
         logger.info(suiteName);
 
@@ -223,9 +221,9 @@ public class RunParallell {
         xmlTest.setExcludedGroups(xmlTestExcludedGroups);
         xmlTest.setClasses(testXmlClasses);
         xmlTest.setPackages(testXmlPackage);
-        String testName = replaceUnneccerayChars(group + "." + value + "." + p2Value + "." + String.format("%05d", Integer.parseInt(testCounter + "")) + TEST_TAG)
+        String testName = replaceUnnecessaryChars(group + "." + value + "." + p2Value + "." + String.format("%05d", Integer.parseInt(testCounter + "")) + TEST_TAG)
         if (!group.equals("")) {
-            testName = replaceUnneccerayChars(group + "." + value + "." + p2Value + "." + String.format("%05d", Integer.parseInt(testCounter + "")) + TEST_TAG)
+            testName = replaceUnnecessaryChars(group + "." + value + "." + p2Value + "." + String.format("%05d", Integer.parseInt(testCounter + "")) + TEST_TAG)
             xmlTest.addIncludedGroup(group)
         }
         xmlTest.setName(testName);
@@ -235,7 +233,7 @@ public class RunParallell {
 
     }
 
-    private static String replaceUnneccerayChars(String string) {
+    private static String replaceUnnecessaryChars(String string) {
         def REG_EXP_ALL = '\\.\\*'
         def REG_EXP_CHAR_1 = '\\.'
         def REG_EXP_CHAR_2 = '_'
@@ -261,24 +259,24 @@ public class RunParallell {
 
 
 
-    private static XmlSuite convertToOneParallellSuite(List<XmlSuite> xmlSuites, int threadCount, String suiteName) {
-        XmlSuite parallellXmlSuite = new XmlSuite();
-        parallellXmlSuite.setThreadCount(threadCount);
-        parallellXmlSuite.setName(suiteName);
+    private static XmlSuite convertToOneParallelSuite(List<XmlSuite> xmlSuites, int threadCount, String suiteName) {
+        XmlSuite parallelXmlSuite = new XmlSuite();
+        parallelXmlSuite.setThreadCount(threadCount);
+        parallelXmlSuite.setName(suiteName);
         int testCounters = 1;
         for (XmlSuite xmlSuite : xmlSuites)
             for (XmlTest xmlTest : xmlSuite.getTests()) {
                 String testName = xmlTest.getName()
                 testName = testName.replaceAll("[0-9]+.test", "") + String.format("%05d", Integer.parseInt(testCounters++ + "")) + TEST_TAG;
-                testName = replaceUnneccerayChars(testName)
+                testName = replaceUnnecessaryChars(testName)
                 xmlTest.setName(testName);
-                parallellXmlSuite.addTest(xmlTest);
+                parallelXmlSuite.addTest(xmlTest);
                 logger.info(xmlTest);
             }
-        logger.info(parallellXmlSuite.toXml());
-        List<XmlSuite> parallellXmlSuites = new ArrayList<XmlSuite>();
-        parallellXmlSuites.add(parallellXmlSuite);
-        return parallellXmlSuite
+        logger.info(parallelXmlSuite.toXml());
+        List<XmlSuite> parallelXmlSuites = new ArrayList<XmlSuite>();
+        parallelXmlSuites.add(parallelXmlSuite);
+        return parallelXmlSuite
     }
 
 }

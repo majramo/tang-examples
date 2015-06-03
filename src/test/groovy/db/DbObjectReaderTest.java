@@ -8,21 +8,21 @@ import static db.DbObjectProvider.getObject;
 import static db.DbObjectProvider.getObjects;
 
 public class DbObjectReaderTest {
-     private final static String QUERY = "SELECT TOP %s FIRSTNAME, CINT_SOC_SEC_NO_DASHLESS from FilteredContact where not CINT_SOC_SEC_NO_DASHLESS is null ORDER BY 1";
+     private final static String QUERY = "SELECT TOP %s firstName from Contact";
 
     @Test(dataProvider = "all")
-    public void all(String firstName, String number) {
-        printOut(firstName, number);
+    public void all(String firstName) {
+        printOut(firstName);
     }
 
     @Test(dataProvider = "firstTwo")
-    public void fristTwo(String firstName, String number) {
-        printOut(firstName, number);
+    public void firstTwo(String firstName) {
+        printOut(firstName);
     }
 
     @Test(dataProvider = "thirdObject")
-    public void thirdObject(String firstName, String number) {
-        printOut(firstName, number);
+    public void thirdObject(String firstName) {
+        printOut(firstName);
     }
 
 
@@ -31,24 +31,24 @@ public class DbObjectReaderTest {
 
     @DataProvider(name = "all")
     public static Object[][] all() {
-        return  getObjects("Test_MSCRM_DB", QUERY);
+        return  getObjects("DataBase", QUERY);
     }
 
     @DataProvider(name = "firstTwo")
     public static Object[][] firstTwo() {
-        return  getObjects("Test_MSCRM_DB", QUERY, 2);
+        return  getObjects("DataBase", QUERY, 2);
     }
 
     @DataProvider(name = "thirdObject")
     public static Object[][] thirdObject() {
-        return  getObject("Test_MSCRM_DB", QUERY, 3);
+        return  getObject("DataBase", QUERY, 3);
     }
 
 
     //######################################################### Print out
 
-    private void printOut(String firstName, String number) {
-        Reporter.log("Firstname: " + firstName + " Number: " +   number);
+    private void printOut(String firstName) {
+        Reporter.log("FirstName: " + firstName );
     }
 
 }

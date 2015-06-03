@@ -26,7 +26,7 @@ public class SearchLastNameAtLinkedInTest extends AnyTest {
         linkedinStartPage.typeSearchLastName(LAST_NAME)
         LinkedInSearchResultPage linkedInSearchResultPage = linkedinStartPage.clickSeacrh()
 
-        Assert.assertTrue(linkedInSearchResultPage.getTextOfFoundPersons().contains(LAST_NAME), "Verify lastname is in text " + LAST_NAME)
+        Assert.assertTrue(linkedInSearchResultPage.getTextOfFoundPersons().contains(LAST_NAME), "Verify lastName is in text " + LAST_NAME)
         Assert.assertTrue(linkedInSearchResultPage.getNumberOfFoundPersons() > 100, "Verify number of profiles is more than " + 100)
         Assert.assertEquals(linkedInSearchResultPage.getNumberOfFoundPersonsOnPage(), HITS_ON_PAGE, "Verify number of hits on page is " + HITS_ON_PAGE)
     }
@@ -37,7 +37,7 @@ public class SearchLastNameAtLinkedInTest extends AnyTest {
         linkedinStartPage.typeSearchFirstName(FIRST_NAME)
         LinkedInSearchResultPage linkedInSearchResultPage = linkedinStartPage.clickSeacrh()
 
-        Assert.assertTrue(linkedInSearchResultPage.getTextOfFoundPersons().contains(FIRST_NAME), "Verify firstname is in text " + FIRST_NAME)
+        Assert.assertTrue(linkedInSearchResultPage.getTextOfFoundPersons().contains(FIRST_NAME), "Verify firstName is in text " + FIRST_NAME)
         Assert.assertEquals(linkedInSearchResultPage.getNumberOfFoundPersonsOnPage(), HITS_ON_PAGE, "Verify number of hits on page is " + HITS_ON_PAGE)
     }
 
@@ -48,7 +48,7 @@ public class SearchLastNameAtLinkedInTest extends AnyTest {
         linkedinStartPage.typeSearchFirstName(FIRST_NAME)
         LinkedInSearchResultPage linkedInSearchResultPage = linkedinStartPage.clickSeacrh()
 
-        Assert.assertTrue(linkedInSearchResultPage.getTextOfFoundPersons().contains(FIRST_NAME), "Verify firstname is in text " + FIRST_NAME)
+        Assert.assertTrue(linkedInSearchResultPage.getTextOfFoundPersons().contains(FIRST_NAME), "Verify firstName is in text " + FIRST_NAME)
         Assert.assertNotEquals(linkedInSearchResultPage.getNumberOfFoundPersonsOnPage(), HITS_ON_PAGE, "Verify number of hits on page is not  " + HITS_ON_PAGE)
     }
 }

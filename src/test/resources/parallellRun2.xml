@@ -10,7 +10,7 @@
             </run>
         </groups>
         <classes>
-            <class name="verification.ikea.SearchPhraseAtIkeaInSeveralCountriesWithDataProvidersTest"/>
+            <class name="verification.ikea.SearchPhraseInSeveralCountriesStaticDataProviderNoSlowDownAtIkeaTest"/>
         </classes>
     </test>
     <!-- TestEnv_One.LOCAL_FIREFOX.00001.test -->
@@ -23,7 +23,7 @@
             </run>
         </groups>
         <classes>
-            <class name="verification.ikea.SearchPhraseAtIkeaInSeveralCountriesWithDataProvidersTest"/>
+            <class name="verification.ikea.SearchPhraseInSeveralCountriesStaticDataProviderNoSlowDownAtIkeaTest"/>
         </classes>
     </test>
     <!-- TestEnv_One.LOCAL_SAFARI.00002.test -->
@@ -36,7 +36,7 @@
             </run>
         </groups>
         <classes>
-            <class name="verification.ikea.SearchPhraseAtIkeaInSeveralCountriesWithDataProvidersTest"/>
+            <class name="verification.ikea.SearchPhraseInSeveralCountriesStaticDataProviderNoSlowDownAtIkeaTest"/>
         </classes>
     </test>
     <!-- TestEnv_One.LOCAL_CHROME.00003.test -->

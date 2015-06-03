@@ -51,7 +51,7 @@ public class ExcelReaderTest {
 
 
     @DataProvider(name = "thirdRow")
-    public Object[][] getExcelThirdthRow() {
+    public Object[][] getExcelThirdRow() {
         return (new ExcelFileReader("/excel/excelTestFile1.xls").getBodyRow(3));
     }
 

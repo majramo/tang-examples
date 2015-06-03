@@ -23,13 +23,13 @@ public class SearchFirstNameAndLastNameAtLinkedInTest extends AnyTest {
 
 
     @Test(enabled = true)
-    public void seachByFirstNameAndLastNameTest() {
+    public void searchByFirstNameAndLastNameTest() {
         linkedinStartPage.typeSearchFirstName(FIRST_NAME)
         linkedinStartPage.typeSearchLastName(LAST_NAME)
         LinkedInSearchResultPage linkedInSearchResultPage = linkedinStartPage.clickSeacrh()
 
-        Assert.assertEquals(FIRST_NAME, linkedInSearchResultPage.getFoundPersonsFirstName(), "Verify firstname to be" + FIRST_NAME)
-        Assert.assertEquals(LAST_NAME, linkedInSearchResultPage.getFoundPersonsLastName(), "Verify lastname to be " + LAST_NAME)
+        Assert.assertEquals(FIRST_NAME, linkedInSearchResultPage.getFoundPersonsFirstName(), "Verify firstName to be" + FIRST_NAME)
+        Assert.assertEquals(LAST_NAME, linkedInSearchResultPage.getFoundPersonsLastName(), "Verify lastName to be " + LAST_NAME)
         Assert.assertEquals(NAME, linkedInSearchResultPage.getFoundPersonsName(), "Verify name to be " + NAME)
     }
 

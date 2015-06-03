@@ -5,12 +5,12 @@ import java.util.zip.ZipFile
 
 public class JarFinder {
     static void main(args) {
-        ArrayList<String> featureTests = findFeatrure("./lib", "feature")
+        ArrayList<String> featureTests = findFeature("./lib", "feature")
         println featureTests.toString()
 
     }
 
-    static ArrayList<String>  findFeatrure(String root = "", String search = "") {
+    static ArrayList<String> findFeature(String root = "", String search = "") {
         String rootDir = root ? root : "."
         String fileToFind = root && search != "" ? search : "class"
         List<String> featureTests = new ArrayList<String>();

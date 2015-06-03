@@ -101,7 +101,7 @@ public class MySqlDbTest extends AnySqlTest {
     }
 
     @DataProvider(name = "tableAndFieldsDuplicates")
-    public Object[][] tableAndFieldsDuplictated() {
+    public Object[][] tableAndFieldsDuplicates() {
         [
                 ["IkeaSearchPhrases", "concat(country , Phrase)"],
                 ["IkeaSearchPhrases", "concat(country , Phrase , hits)"],

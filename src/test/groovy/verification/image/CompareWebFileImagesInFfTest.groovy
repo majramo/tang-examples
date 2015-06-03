@@ -55,7 +55,7 @@ public class CompareWebFileImagesInFfTest extends AnyTest {
     }
 
     @Test(groups = "groupOne", description = "Take an screen shot of google page with different browser and compare")
-    public void compareFirefo2_3_Test() {
+    public void compareFirefox2_3_Test() {
         imageHelper.addImageToReport(firefoxBrowserImageFile2)
         imageHelper.addImageToReport(firefoxBrowserImageFile3)
 

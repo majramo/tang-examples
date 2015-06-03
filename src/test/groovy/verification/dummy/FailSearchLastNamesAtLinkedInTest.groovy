@@ -37,7 +37,7 @@ public class FailSearchLastNamesAtLinkedInTest extends AnyTest {
         linkedinStartPage.typeSearchLastName(lastName)
 
         LinkedInSearchResultPage linkedInSearchResultPage = linkedinStartPage.clickSeacrh()
-        tangAssert.assertTrue(linkedInSearchResultPage.getTextOfFoundPersons().contains(lastName), "Verify lastname is in text $LT$lastName$GT")
+        tangAssert.assertTrue(linkedInSearchResultPage.getTextOfFoundPersons().contains(lastName), "Verify lastName is in text $LT$lastName$GT")
         def numberOfFoundPersons = linkedInSearchResultPage.getNumberOfFoundPersons()
         tangAssert.assertTrue((numberOfFoundPersons > searchCount), "Verify number of profiles $LT$numberOfFoundPersons$GT is more than $LT$searchCount$GT")
     }

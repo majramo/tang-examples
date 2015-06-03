@@ -2,15 +2,14 @@ package run
 
 import corebase.HtmlXmlValidationEngine
 import htmls.LinkedInDatabaseVerificationHtmlDTO
-import htmls.LinkedInTextAndValuesComparationHtmlDTO
 import org.apache.log4j.Logger
 
 public class RunOfflineTest {
-    private final static Logger log = Logger.getLogger("ROT  ")
-    static def settingsFile = "/configFiles/settings.groovy"
+    private final static Logger logger = Logger.getLogger("ROT  ")
+    static def s_settingsFile = "/configFiles/settings.groovy"
 
     static main(args) {
-        InputStream is = this.getClass().getResourceAsStream(settingsFile);
+        InputStream is = this.getClass().getResourceAsStream(s_settingsFile);
         String content = is.text
         def configurations = new ConfigSlurper().parse(content)
         def xmlHtmlSourceFile
@@ -25,19 +24,19 @@ public class RunOfflineTest {
 
         Integer priority = 1
 
-//        htmlDtoClasses[LinkedInTextAndValuesComparationHtmlDTO.getSimpleName()] = 01
-        htmlDtoClasses[LinkedInDatabaseVerificationHtmlDTO.getSimpleName()] = 01
+//        htmlDtoClasses[LinkedInTextAndValuesComparisonHtmlDTO.getSimpleName()] = 1
+        htmlDtoClasses[LinkedInDatabaseVerificationHtmlDTO.getSimpleName()] = 1
         xmlDtoClasses["LinkedInResXMLDTO"] = 0
         restDtoClasses["searchXmlDTO"] = 0
 
 
         htmlDtoClasses.each() { htmlDtoName, htmlRun ->
             if (htmlRun && htmlDtoName != "xxx") {
-                log.info "##################################################################"
-                log.info "Run DTO $htmlDtoName"
-                log.info ""
+                logger.info "##################################################################"
+                logger.info "Run DTO $htmlDtoName"
+                logger.info ""
                 xmlHtmlSourceFile = configurations.HtmlXmlSourceFilesPath + htmlDtoName + '.html'
-                log.info "Reading file <$xmlHtmlSourceFile>"
+                logger.info "Reading file <$xmlHtmlSourceFile>"
 
                 def htmlXmlSource
                 try {
@@ -45,30 +44,30 @@ public class RunOfflineTest {
                     htmlXmlSource = is.text
                     hxve = new HtmlXmlValidationEngine(context, htmlDtoName, htmlXmlSource, priority)
                     if (hxve != null) {
-                        def xmlMarkupFileWithUtfHeader = hxve.returnAsserttionFile()
+                        def xmlMarkupFileWithUtfHeader = hxve.returnAssertFile()
                         if (xmlMarkupFileWithUtfHeader != null) {
                             println hxve.returnAssertResult()
-                            log.info ""
-                            log.info ""
-                            log.info "Run result " + hxve.returnAssertResult()
-                            log.info "Check results in file $xmlMarkupFileWithUtfHeader"
-                            log.info "Done DTO $htmlDtoName"
+                            logger.info ""
+                            logger.info ""
+                            logger.info "Run result " + hxve.returnAssertResult()
+                            logger.info "Check results in file $xmlMarkupFileWithUtfHeader"
+                            logger.info "Done DTO $htmlDtoName"
                         } else {
-                            log.info "htmlDtoName is not valid"
-                            log.info "Canceled DTO $htmlDtoName"
+                            logger.info "htmlDtoName is not valid"
+                            logger.info "Canceled DTO $htmlDtoName"
                         }
-                        log.info "##################################################################"
+                        logger.info "##################################################################"
                     }
                 } catch (FileNotFoundException e) {
-                    log.error "Can't find file <$xmlHtmlSourceFile> $e"
-                    log.info "Canceled DTO $htmlDtoName"
+                    logger.error "Can't find file <$xmlHtmlSourceFile> $e"
+                    logger.info "Canceled DTO $htmlDtoName"
                 }
             }
 //			restDtoClasses.each(){restDtoName, restRun->
 //				if(restRun && restDtoName != "xxx"){
-//					log.info "##################################################################"
-//					log.info "DTO $restDtoName"
-//					log.info ""
+//					logger.info "##################################################################"
+//					logger.info "DTO $restDtoName"
+//					logger.info ""
 //
 //					RESTClient rest = new RESTClient( 'http://localhost:8088/mockSampleServiceSoapBindingseasrch/' )
 //					rest.setContentType(ContentType.XML)
@@ -93,16 +92,16 @@ public class RunOfflineTest {
 //					//def restSource = new ConfigSlurper().parse( a.toString())
 //					hxve = new HtmlXmlValidationEngine(context, restDtoName, r , priority)
 //					if(hxve != null){
-//						def xmlMarkupFileWithUtfHeader = hxve.returnAsserttionFile()
+//						def xmlMarkupFileWithUtfHeader = hxve.returnAssertFile()
 //						if(xmlMarkupFileWithUtfHeader != null){
-//							log.info "Check results"
-//							log.info "\n$xmlMarkupFileWithUtfHeader"
-//							log.info "Done $restDtoName"
+//							logger.info "Check results"
+//							logger.info "\n$xmlMarkupFileWithUtfHeader"
+//							logger.info "Done $restDtoName"
 //						}else{
-//							log.info "restDtoName is not valid"
-//							log.info "CANCELED			$restDtoName"
+//							logger.info "restDtoName is not valid"
+//							logger.info "CANCELED			$restDtoName"
 //						}
-//						log.info "##################################################################"
+//						logger.info "##################################################################"
 ////					}
 //				}
 //			}

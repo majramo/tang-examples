@@ -8,7 +8,7 @@ import static excel.ExcelObjectProvider.getObject
 import static excel.ExcelObjectProvider.getObjects
 
 class ExcelObjectReaderGroovy {
-    private final static def columns = ["Number", "Age", "Name", "Gender"];
+    private final static def s_columns = ["Number", "Age", "Name", "Gender"];
     private final static String INPUT_FILE = "/excel/excelTestFile1.xls";
 
     @Test(dataProvider = "all")
@@ -17,7 +17,7 @@ class ExcelObjectReaderGroovy {
     }
 
     @Test(dataProvider = "firstTwo")
-    public void fristTwo(String number, String name, String age, String gender) {
+    public void firstTwo(String number, String name, String age, String gender) {
         printOut(number, name, age, gender);
     }
 
@@ -41,28 +41,28 @@ class ExcelObjectReaderGroovy {
 
     @DataProvider(name = "all")
     public static Object[][] all() {
-        return  getObjects(INPUT_FILE, 0, columns);
+        return  getObjects(INPUT_FILE, 0, s_columns);
     }
 
     @DataProvider(name = "firstTwo")
     public static Object[][] firstTwo() {
-        return  getObjects(INPUT_FILE, 2, columns);
+        return  getObjects(INPUT_FILE, 2, s_columns);
     }
 
     @DataProvider(name = "thirdObject")
     public static Object[][] thirdObject() {
-        return  getObject(INPUT_FILE, 3, columns);
+        return  getObject(INPUT_FILE, 3, s_columns);
     }
 
     @DataProvider(name = "fourthObject")
     public static Object[][] fourthObject() {
-        return  getObject(INPUT_FILE, 4, columns);
+        return  getObject(INPUT_FILE, 4, s_columns);
     }
 
 
     @DataProvider(name = "ninthObject")
     public static Object[][] ninthObject() {
-        return  getObject(INPUT_FILE, 9, columns);
+        return  getObject(INPUT_FILE, 9, s_columns);
     }
 
 
