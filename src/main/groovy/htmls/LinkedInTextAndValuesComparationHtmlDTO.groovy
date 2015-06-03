@@ -14,6 +14,7 @@ public class LinkedInTextAndValuesComparationHtmlDTO extends HtmlXmlBaseDto {
         HtmlXmlBaseDto child
         anchor = '//*[@id="content"]'
 
+
         super.init(context, htmlXmlSource, priority)
 
         child = createChild("Text comparation", PRIORITY_1, REGRESSION_TEST, "", "//*[@id='overview']")
