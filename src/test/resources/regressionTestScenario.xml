@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="5">
+
+    <test name="Test Passed" enabled="true">
+        <!--<parameter name="browser" value="LOCAL_HTML_UNIT"></parameter>-->
+        <classes>
+            <class name="verification.demo.PassedTest"/>
+        </classes>
+    </test> <!-- Test -->
+
+    <test name="Test Failed" enabled="true">
+        <!--<parameter name="browser" value="LOCAL_HTML_UNIT"></parameter>-->
+        <classes>
+            <class name="verification.demo.FailedTest"/>
+        </classes>
+    </test> <!-- Test -->
+
+    <test name="Test ExcelReader" enabled="true">
+        <classes>
+            <class name="excel.ExcelObjectReaderGroovy"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
