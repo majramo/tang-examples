@@ -5,9 +5,9 @@ import dtos.HtmlXmlBaseDto
 import static dtos.base.Constants.*
 import static dtos.base.Constants.CompareType.*
 
-public class LinkedInTextAndValuesComparationHtmlDTO extends HtmlXmlBaseDto {
+public class LinkedInTextAndValuesComparaisonHtmlDTO extends HtmlXmlBaseDto {
 
-    protected LinkedInTextAndValuesComparationHtmlDTO(Map context, String htmlXmlSource, priority) {
+    protected LinkedInTextAndValuesComparaisonHtmlDTO(Map context, String htmlXmlSource, priority) {
         moduleName = this.class.name
         actionName = ASSERT
         htmlXmlSourceType = HTML
