@@ -21,4 +21,15 @@
             <class name="excel.ExcelObjectReaderGroovy"/>
         </classes>
     </test> <!-- Test -->
+
+    <test name="Test Links statistics" enabled="true">
+        <classes>
+            <class name="verification.demo.VerifyLinksTest">
+            <methods>
+                <include name="verifyLinksOnBaggbronPage" />
+            </methods>
+        </class>
+        </classes>
+    </test> <!-- Test -->
+
 </suite> <!-- Suite -->

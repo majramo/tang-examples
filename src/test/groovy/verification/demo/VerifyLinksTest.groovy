@@ -20,7 +20,7 @@ public class VerifyLinksTest extends AnyTest {
     }
 
     @Test(groups = "groupOne", description = "REQ ID = ...")
-    public void verifyLinksOnPage_3(ITestContext iTestContext) {
+    public void verifyLinksOnBaggbronPage(ITestContext iTestContext) {
         driver.openUrl("http://www.baggbron.se/")
         driver.analyseLinksByXpath("//*[@href]")
     }
