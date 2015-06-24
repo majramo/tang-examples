@@ -2,38 +2,35 @@ package verification.demo
 
 import base.AnyTest
 import org.testng.Assert
-import org.testng.ITestContext
 import org.testng.annotations.DataProvider
 import org.testng.annotations.Test
 
-public class VerifyGermanWordsTest extends AnyTest {
+public class VerifyWordsOnWebPageTest extends AnyTest {
 
     static boolean firstRun = true
-    final static boolean PAGE_CONTAINS_NOT_THE_WORD = true
-    final static boolean PAGE_CONTAINS_THE_WORD = true
-    static def pageText = ""
-    public static final String URL = "http://www.google.com"
-    static int dataProviderinvalidWordsCounter = 0
-    static int pageinvalidWordsCounter = 0
+    static String pageText = ""
+    public static final String PAGE_URL = "http://www.google.com"
+    static int dataProviderInvalidWordsCounter = 0
+    static int pageInvalidWordsCounter = 0
     static int dataProviderValidWordsCounter = 0
     static int pageValidWordsCounter = 0
     boolean screenShotTaken = false
 
     @Test(dataProvider = "invalidWords", groups = "groupOne", description = "REQ ID = ...")
-    public void verifyPageContainsNotInvalidWord_NoScreenShot(word) {
+    public void pageContainsNotInvalidWord_NoScreenShot(String word) {
 
         reporterLogLn()
-        reporterLogLn("Page $URL")
+        reporterLogLn("Page $PAGE_URL")
         openPage()
 
-        dataProviderinvalidWordsCounter++
+        dataProviderInvalidWordsCounter++
         String displayWord = "[$word]"
         reporterLogLn()
-        reporterLogLn("Counter $dataProviderinvalidWordsCounter $displayWord")
+        reporterLogLn("Counter $dataProviderInvalidWordsCounter $displayWord")
         boolean wordResult = pageText.contains(word.toLowerCase())
         if (wordResult) {
-            pageinvalidWordsCounter++
-            reporterLogLn("Invalid word found: $pageinvalidWordsCounter($dataProviderinvalidWordsCounter) $displayWord")
+            pageInvalidWordsCounter++
+            reporterLogLn("Invalid word found: $pageInvalidWordsCounter($dataProviderInvalidWordsCounter) $displayWord")
             takeScreenShotNow()
             Assert.fail()
         } else {
@@ -42,7 +39,7 @@ public class VerifyGermanWordsTest extends AnyTest {
 
     }
 
-    Closure takeScreenShotNow() {
+    private void takeScreenShotNow() {
         if (!screenShotTaken) {
             driver.takeScreenShot("")
             screenShotTaken = true
@@ -50,9 +47,9 @@ public class VerifyGermanWordsTest extends AnyTest {
     }
 
     @Test(dataProvider = "validWords", groups = "groupOne", description = "REQ ID = ...")
-    public void verifyPageContainsValidWord_NoScreenShot(word) {
+    public void pageContainsValidWord_NoScreenShot(String word) {
 
-        reporterLogLn("Page $URL")
+        reporterLogLn("Page $PAGE_URL")
         String displayWord = "[$word]"
         openPage()
         
@@ -60,7 +57,7 @@ public class VerifyGermanWordsTest extends AnyTest {
         reporterLogLn()
         reporterLogLn("Counter $dataProviderValidWordsCounter $displayWord")
         boolean wordResult = pageText.contains(word.toLowerCase())
-        if (!wordResult) {
+        if (wordResult.equals(false)) {
             pageValidWordsCounter++
             reporterLogLn("Valid word not found: $pageValidWordsCounter($dataProviderValidWordsCounter) $displayWord")
             takeScreenShotNow()
@@ -71,9 +68,9 @@ public class VerifyGermanWordsTest extends AnyTest {
 
     }
 
-    private boolean openPage() {
+    private void openPage() {
         if (firstRun) {
-            driver.openUrl(URL)
+            driver.openUrl(PAGE_URL)
             pageText = driver.getText("/*").toLowerCase()
             firstRun = false
         } 
