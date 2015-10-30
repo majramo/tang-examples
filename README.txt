@@ -1,4 +1,4 @@
-Test Automation Next Generation examples
+    Test Automation Next Generation examples
 
 Load the project in your ide
 
@@ -7,7 +7,7 @@ choose a test and run
 load file target/test-classes/site/tang-examples/index.html in a browser to see the report
 
 run with maven
-Todo: right now problem with a class!!!
+
 mvn clean test -DtestFile=testng -P tang site org.reportyng:reporty-ng:1.2:reportyng
 load file target/test-classes/site/tang-examples/index.html in a browser to see the report
 
