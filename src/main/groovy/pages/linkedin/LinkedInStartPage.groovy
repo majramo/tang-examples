@@ -6,13 +6,13 @@ import org.testng.Assert
 
 public class LinkedInStartPage extends AnyPage{
 	public final static String PAGE_URL = "http://www.linkedin.com"
-	private final static String SEACRH_FIRST_NAME = "//*[@id='first']"
-	private final static String SEACRH_LAST_NAME = "//*[@id='last']"
-	private final static String SEACRH_BUTTON = "//*[@id='search']/form/p/input"
+	private final static String SEACRH_FIRST_NAME = "//*[@id='pagekey-uno-reg-guest-home']// input[@name='first']"
+	private final static String SEACRH_LAST_NAME = "//*[@id='pagekey-uno-reg-guest-home']// input[@name='last']"
+	private final static String SEACRH_BUTTON = "//*[@id='pagekey-uno-reg-guest-home']// input[@name='search']"
 	private final static String SEACRHED_PERSON_FIRST_NAME = "//*[@id='name']/span/span[1]"
 	private final static String SEACRHED_PERSON_LAST_NAME = "//*[@id='name']/span/span[2]"
 	private final static String SEACRHED_PERSONS_LIST= "//*[@id='result-set']/li"
-	private final static String USER_AGREEMENT= "//*[@id='nav-legal']/li[1]/a"
+	private final static String HOME_IMG = "pagekey-uno-reg-guest-home"
 	 
 	public LinkedInStartPage(final ISeleniumHelper driver){
 		super(driver)
@@ -20,7 +20,7 @@ public class LinkedInStartPage extends AnyPage{
 
 	public void load(){
 		driver.openUrl(PAGE_URL)
-		Assert.assertTrue(driver.isTagAvailable(USER_AGREEMENT),"User agreement is not on page " + USER_AGREEMENT)
+		Assert.assertTrue(driver.isTagAvailable(HOME_IMG),"User agreement is not on page " + HOME_IMG)
 	}
 	
 	public void typeSearchFirstName(data){
