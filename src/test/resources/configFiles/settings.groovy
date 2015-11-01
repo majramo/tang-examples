@@ -20,8 +20,7 @@ IE_DRIVER_PATH.WIN = "drivers/IEDriverServer_x64_2.42.0.exe"
 firefoxProfileFolder = "seleniumProfile"
 // ==>Database setting
 localDb = 'jdbc:h2'
-jdbcSqlServerDriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"
-jdbcSqlDriverName = "jdbc:sqlserver"
+jdbcJtdsSqlDriver = "net.sourceforge.jtds.Driver"
 jdbcJtdsSqlDriverName = "jdbc:jtds:sqlserver"
 jdbcSqlH2Driver = "org.h2.Driver"
 jdbcSqlH2DriverName = "jdbc:h2"
@@ -50,12 +49,12 @@ mySqlDb {
 }
 
 sqlServer {
-    dbDriverName = jdbcSqlDriverName
-    dbDriver = jdbcMySqlServerDriver
+    dbDriverName = jdbcJtdsSqlDriverName
+    dbDriver = jdbcJtdsSqlDriver
     dbUrl = jdbcSqlServerUrl
     dbUserName = jdbcSqlServerUserName
     dbPassword = jdbcSqlServerPassword
-    dbTestDataBase = jdbcSqlServerPassword
+    dbTestDataBase = "test"
 }
 
 oracle {
