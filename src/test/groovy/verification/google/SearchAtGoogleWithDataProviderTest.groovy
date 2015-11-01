@@ -60,10 +60,10 @@ public class SearchAtGoogleWithDataProviderTest extends AnyTest {
     @DataProvider(name = "createGoogleCombinedSearchData")
     public Object[][] createGoogleCombinedSearchData() {
         String[] search1 = ["Majid", "Aram"]
-        String[] search2 = ["Majid", "Aram", "Vem"]
-        String[] search3 = ["Majid", "Aram", "Vem", "Automation"]
-        String[] search4 = ["Majid", "Aram", "Vem", "Automation", "Test"]
-        String[] search5 = ["Majid", "Aram", "Vem", "Automation", "Test", "kalle anka"]
+        String[] search2 = ["Majid", "Aram", "TANG"]
+        String[] search3 = ["Majid", "Aram", "TANG", "Automation"]
+        String[] search4 = ["Majid", "Aram", "TANG", "Automation", "Test"]
+        String[] search5 = ["Majid", "Aram", "TANG", "Automation", "Test", "kalle anka"]
 
         return [
                 [search1, new Integer(9)],
