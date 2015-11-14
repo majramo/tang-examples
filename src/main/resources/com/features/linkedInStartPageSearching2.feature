@@ -19,5 +19,4 @@ Feature: As a user
 
   Examples: Search for different persons
     | browser        | firstName | lastName   | hits  |
-    | LOCAL_FIREFOX  |  Claes    | Jonsson    | 25    |
-    | LOCAL_FIREFOX  |  Stefan   | Lundin     | 25    |
+#    | LOCAL_FIREFOX  |  Majid    | Aram    | 25    |

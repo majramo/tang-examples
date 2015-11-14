@@ -4,11 +4,11 @@ import base.AnyPage
 import corebase.ISeleniumHelper
 
 public class LinkedInSearchResultPage extends AnyPage {
-    private final static String SEACRHED_PERSON_FIRST_NAME = "//*[@id='name']/span/span[1]"
-    private final static String SEACRHED_PERSON_LAST_NAME = "//*[@id='name']/span/span[2]"
-    private final static String SEACRHED_PERSONS_LIST = "//*[@id='result-set']/li"
-    private final static String SEACRHED_RESULT = "//*[@id='content']/ul/li "
-    private final static String USER_AGREEMENT = "//*[@id='nav-legal']/li[1]/a"
+    private final static String SEACRHED_PERSON_FIRST_NAME = ".//*[@id='wrapper']/div[1]/div[1]/h1"
+    private final static String SEACRHED_PERSON_LAST_NAME = ".//*[@id='wrapper']/div[1]/div[1]/h1"
+    private final static String SEACRHED_PERSONS_LIST = "//*[@id='wrapper']//li"
+    private final static String SEACRHED_RESULT = "//*[@id='wrapper']//li "
+    private final static String USER_AGREEMENT = "//*[@id='layout-footer']//*[@class='nav-legal']//a"
     private final static String SEARCH_RESULTS = "//*[@id='result-set']/li"
     private final static String SEARCH_STRING_IN_RESULT = SEARCH_RESULTS + "//dl/*[descendant::text()[contains(.,'%s')]]   /../..//strong/a"
     private final static String FIRST_RESULT_PROFILE = "//*[@id='result-set']/li[1]/h2//a"
