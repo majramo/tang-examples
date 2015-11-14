@@ -1,25 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="tests" thread-count="3">
-	<test name="Test1">
+	<test name="Bdt_LinkedIn">
+		<parameter name="environment" value="TestEnv1"/>
+		<classes>
+			<class name="com.talios.TestFactoryLinkedIn" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="TestNG2">
 		<parameter name="environment" value="TestEnv1"/>
 		<classes>
 			<class name="verification.dummy.GoogleSearchTest" />
 		</classes>
 	</test> <!-- Test -->
-	<test name="Test2">
-		<parameter name="environment" value="TestEnv1"/>
+	<test name="TestNG1">
+		<parameter name="environment" value="TestEnv3"/>
 		<classes>
 			<class name="verification.dummy.GoogleSearchTest" />
 		</classes>
 	</test> <!-- Test -->
-	<test name="Test3">
-		<parameter name="environment" value="TestEnv2"/>
+	<test name="Mbt_Amazon">
 		<classes>
-			<class name="verification.dummy.GoogleSearchTest" />
+			<class name="verification.amazonGw.AmazonMbtTestRun">
+				<methods>
+					<include name="random"/>
+					<!--  http://tangapro.local:9191  -->
+				</methods>
+			</class>
 		</classes>
-	</test> <!-- Test -->
-	<test name="Test4">
+	</test>
+
+	<test name="TestNG3	">
 		<parameter name="environment" value="TestEnv3"/>
 		<classes>
 			<class name="verification.dummy.GoogleSearchTest" />
