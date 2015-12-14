@@ -1,6 +1,25 @@
 package configFiles
 
-import static corebase.GlobalConstants.*
+import org.sikuli.script.Key
+import org.sikuli.script.KeyModifier
+
+import static corebase.GlobalConstants.LOCAL_SAFARI
+import static corebase.GlobalConstants.LOCAL_FIREFOX
+import static corebase.GlobalConstants.LOCAL_HTML_UNIT
+import static corebase.GlobalConstants.LOCAL
+import static corebase.GlobalConstants.HTMLUNIT
+import static corebase.GlobalConstants.COMPANY_HUB
+import static corebase.GlobalConstants.FIREFOX
+import static corebase.GlobalConstants.SAFARI
+import static corebase.GlobalConstants.CHROME
+import static corebase.GlobalConstants.LOCAL_CHROME
+import static corebase.GlobalConstants.LOCAL_INTERNET_EXPLORER
+import static corebase.GlobalConstants.INTERNET_EXPLORER
+import static corebase.GlobalConstants.SAUCELABS_HUB
+import static corebase.GlobalConstants.ANDROID
+import static corebase.GlobalConstants.IPAD
+import static corebase.GlobalConstants.IPHONE
+import static corebase.GlobalConstants.OPERA
 
 defaultBrowser = LOCAL_FIREFOX
 //defaultBrowser = LOCAL_INTERNET_EXPLORER
@@ -146,5 +165,10 @@ webDrivers = [
 
 pkdiff.MAC="/app/perceptualdiff"
 pkdiff.WIN="/app/perceptualdiff.exe"
+MAC{
+    defaultBrowserApp = "Safari.app"
+    pkdiff = "/app/perceptualdiff"
+}
+defaultBrowserApp.WIN = "Firefox"
 
 iconsSourceDir="src/test/resources/icons"
