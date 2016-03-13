@@ -19,8 +19,8 @@ public class MySqlDbTest extends AnySqlTest {
         dbResult.each {
             Reporter.log(counter++ + " " + it.toString())
         }
-        tangAssert.assertTrue(dbResult.size() > 0, "Result should have some value")
-//        tangAssert.assertTrue(dbResult.size() < 1, "Result should have some value")
+        tangAssert.assertTrue(dbResult.size() > 0, "Result should have same value")
+//        tangAssert.assertTrue(tdmDbResult.size() < 1, "Result should have same value")
     }
 
     @Test(groups = "groupOne", description = "REQ ID = Req abcd")
@@ -71,8 +71,8 @@ public class MySqlDbTest extends AnySqlTest {
         dbResult.each {
             Reporter.log(counter++ + " " + it.toString())
         }
-        tangAssert.assertTrue(dbResult.size() > 0, "Result should have some value")
-//        tangAssert.assertTrue(dbResult.size() < 1, "Result should have some value")
+        tangAssert.assertTrue(dbResult.size() > 0, "Result should have same value")
+//        tangAssert.assertTrue(tdmDbResult.size() < 1, "Result should have same value")
     }
 
     @Test(dataProvider = "tableAndFieldsEqualNull", groups = "data", description = "REQ ID = Req abcd")
