@@ -1,7 +1,5 @@
 package configFiles
 
-import org.sikuli.script.Key
-import org.sikuli.script.KeyModifier
 
 import static corebase.GlobalConstants.LOCAL_SAFARI
 import static corebase.GlobalConstants.LOCAL_FIREFOX
