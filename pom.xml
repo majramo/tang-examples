@@ -5,7 +5,7 @@
 
     <groupId>org.tang</groupId>
     <artifactId>tang-examples</artifactId>
-    <version>0.0.91-SNAPSHOT</version>
+    <version>0.0.92-SNAPSHOT</version>
     <name>tang-examples</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -103,7 +103,12 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>2.38.0</version>
+            <version>2.52.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.3.5</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
