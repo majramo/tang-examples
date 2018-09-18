@@ -24,14 +24,6 @@ public class PassedTest extends AnyTest {
 
 
         tangAssert.assertTrue(true, "Passed test")
-        reporterHelper.log("onConfigurationSuccess: beforeSuiteVemHt")
-        reporterHelper.log("onConfigurationSuccess: beforeSuiteVemHt")
-        reporterHelper.log("")
-        reporterHelper.log("onConfigurationSuccess: beforeSuiteVemHt")
-        reporterHelper.addPassedIcon()
-        reporterHelper.addFaildIcon()
-        reporterHelper.addPassedIcon()
-        reporterHelper.addFaildIcon()
 
     }
 
