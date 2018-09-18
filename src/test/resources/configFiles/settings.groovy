@@ -21,18 +21,21 @@ import static corebase.GlobalConstants.OPERA
 
 defaultBrowser = LOCAL_FIREFOX
 //defaultBrowser = LOCAL_INTERNET_EXPLORER
-//defaultBrowser = LOCAL_CHROME
+defaultBrowser = LOCAL_CHROME
 //defaultBrowser = LOCAL_SAFARI
 //defaultBrowser = LOCAL_HTML_UNIT
 
-dbRun = false
+dbRun = true
 guiRun = true
 maxAyyaySizeToWorkWith = 50
+maxDiffsToShow = 10
+printOkCheck = false
 
 CHROME_DRIVER_PATH.MAC = "drivers/chromedriver"
 CHROME_DRIVER_PATH.WIN = "drivers/chromedriver.exe"
 IE_DRIVER_PATH.MAC = "drivers/IEDriverServer_x64_2.42.0.exe"
 IE_DRIVER_PATH.WIN = "drivers/IEDriverServer_x64_2.42.0.exe"
+GECKO_DRIVER_PATH.WIN = "drivers/geckodriver.exe"
 
 firefoxProfileFolder = "seleniumProfile"
 // ==>Database setting
@@ -83,6 +86,7 @@ oracle {
     dbTestDataBase = jdbcSqlServerPassword
 }
 
+
 h2Db {
     dbDriverName = jdbcSqlH2DriverName
     dbDriver = jdbcSqlH2Driver
@@ -102,7 +106,7 @@ Db2tFtDb_2 {
 }
 
 
-defaultDatabase = "mySqlDb"
+defaultDatabase = ""
 
 configFiles {
     servers = 'server.groovy'
