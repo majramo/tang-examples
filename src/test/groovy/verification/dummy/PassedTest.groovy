@@ -18,6 +18,11 @@ public class PassedTest extends AnyTest {
         log.fatal("Fatal Message!");
         driver.openUrl("http://www.google.com")
         driver.takeScreenShot("Screen shot")
+        driver.typeAndEnter("lst-ib", "Majid Aram Test")
+        driver.isDisplayed("//*[@id='rso']//h3", 3)
+        driver.takeScreenShot("My screenshot")
+
+
         tangAssert.assertTrue(true, "Passed test")
         reporterHelper.log("onConfigurationSuccess: beforeSuiteVemHt")
         reporterHelper.log("onConfigurationSuccess: beforeSuiteVemHt")

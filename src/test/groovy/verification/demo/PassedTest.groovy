@@ -10,7 +10,7 @@ public class PassedTest extends AnyTest {
     public void searchAtGooglePassTest(ITestContext iTestContext) {
         driver.openUrl("http://www.google.se")
         driver.type("lst-ib", "mAJID aRAM")
-        driver.click("//*[@id='sblsbb']/button")
+        driver.click("_fZl")
         tangAssert.assertTrue(driver.isDisplayed("//h3/a[contains(text(),'Majid Aram')]"), "Check the result contains text")
         takeScreenshot("")
         tangAssert.assertTrue(true, "Passing test method")
