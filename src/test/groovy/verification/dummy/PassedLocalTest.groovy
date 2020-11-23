@@ -8,7 +8,7 @@ public class PassedLocalTest extends AnyTest {
 
     @Test(groups = "groupTwo")
     public void passedLocalTest_1() {
-        Reporter.log("Open ur: file:///Users/majidaram/dev/tang-examples/src/test/resources/file1.png")
+        Reporter.log("Open ur: file: /file1.png")
         File file = new dtos.FileUtilsHelper().loadResourceFile("/file1.png")
 
         driver.openUrl(file.path)
