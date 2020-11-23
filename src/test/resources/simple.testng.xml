@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="tests" thread-count="5">
-    <test name="Test Google Firefox" enabled="true">
+    <test name="Test Firefox" enabled="true">
         <parameter name="browser" value="LOCAL_FIREFOX"></parameter>
         <classes>
             <class name="verification.dummy.PassedTest"/>
         </classes>
     </test> <!-- Test -->
-    <test name="Test Google Firefox2" enabled="true">
-        <parameter name="browser" value="LOCAL_FIREFOX"></parameter>
+    <test name="Test chrome" enabled="true">
+        <parameter name="browser" value="LOCAL_CHROME"></parameter>
         <classes>
             <class name="verification.dummy.PassedTest"/>
         </classes>
